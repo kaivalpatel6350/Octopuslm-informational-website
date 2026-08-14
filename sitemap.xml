@@ -2,7 +2,7 @@
 <!--
   Sitemap for octopuslm.co
 
-  Lists only canonical, indexable content: the marketing homepage and the blog.
+  Lists only canonical, indexable content: the homepage, press page, and blog.
   terms.html and 404.html are intentionally excluded because they are marked
   noindex — listing a noindex page in a sitemap sends Google a mixed signal.
 -->
@@ -22,6 +22,14 @@
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Press & news -->
+  <url>
+    <loc>https://octopuslm.co/press/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Blog posts -->

@@ -14,6 +14,7 @@ Static HTML + Tailwind (CDN). No build step, no dependencies.
 ├── terms.html          # Terms of Service (noindex)
 ├── 404.html            # Custom error page (served by GitHub Pages)
 ├── blog/               # Blog listing + 10 articles
+├── press/              # Press releases & media coverage
 ├── favicon/            # Favicon set
 ├── 1.png               # Open Graph / social share image
 ├── logo.svg            # Logo used in structured data
@@ -51,12 +52,19 @@ point the `octopuslm.co` DNS at GitHub Pages.
 ## SEO notes
 
 - Every page has a unique `<title>`, meta description, canonical URL, and exactly one `<h1>`.
-- `index.html` carries `SoftwareApplication` and `Organization` JSON-LD; blog posts carry `Article` JSON-LD.
+- `index.html` carries `SoftwareApplication` and `Organization` JSON-LD; blog posts carry `Article` JSON-LD; `press/` carries `CollectionPage` with a `NewsArticle` per release.
 - `terms.html` and `404.html` are `noindex` and deliberately excluded from `sitemap.xml`.
 - Social previews use `1.png` via Open Graph and Twitter Card tags.
 
 When updating pricing or product claims, update the copy **and** the JSON-LD
 `offers` block in `index.html` so structured data doesn't drift from the page.
+
+## Adding a press release
+
+In `press/index.html`, copy the existing `<li>` block to the **top** of the
+list and update the tag, `<time datetime="YYYY-MM-DD">`, outlet, headline,
+summary, and link. Then add a matching `NewsArticle` entry to the `hasPart`
+array in the JSON-LD, and bump `<lastmod>` for `/press/` in `sitemap.xml`.
 
 ## License
 
