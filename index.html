@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>OctopusLM — Medical Record Summaries & Chronologies from PDFs</title>
+    <meta name="title" content="OctopusLM — Medical Record Summaries & Chronologies from PDFs">
+    <meta name="description"
+        content="Upload PDF medical records. Get a narrative summary and a dated chronology, with every line citing the source page. Built for IME physicians, legal nurse consultants, and attorneys. HIPAA compliant. $0.10/page or $250/month unlimited.">
+    <meta name="keywords"
+        content="medical record review software, medical chronology software, IME software, medical record summary AI, legal nurse consultant tools, independent medical examination, personal injury medical records">
+    <meta name="author" content="Neopric Inc.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://octopuslm.co/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://octopuslm.co/">
+    <meta property="og:title" content="OctopusLM — Medical Record Summaries & Chronologies from PDFs">
+    <meta property="og:description"
+        content="Upload PDF medical records. Get a narrative summary and a dated chronology, with every line citing the source page. HIPAA compliant.">
+    <meta property="og:image" content="https://octopuslm.co/1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="OctopusLM turning a PDF medical record into a cited summary and chronology">
+    <meta property="og:site_name" content="OctopusLM">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://octopuslm.co/">
+    <meta property="twitter:title" content="OctopusLM — Medical Record Summaries & Chronologies from PDFs">
+    <meta property="twitter:description"
+        content="Upload PDF medical records. Get a narrative summary and a dated chronology, with every line citing the source page.">
+    <meta property="twitter:image" content="https://octopuslm.co/1.png">
+    <meta property="twitter:image:alt" content="OctopusLM turning a PDF medical record into a cited summary and chronology">
+
+    <!-- Favicons — relative paths so they resolve on Netlify, on a subpath, and
+         when the file is opened directly from disk -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/web-app-manifest-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+    <!-- Structured Data — SoftwareApplication (reflects real web app + real pricing) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OctopusLM",
+      "applicationCategory": "MedicalApplication",
+      "operatingSystem": "Web",
+      "url": "https://octopuslm.co/",
+      "description": "Web application that turns PDF medical records into a narrative summary and a dated chronology, with page-level citations back to the source document.",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Pay As You Go",
+          "price": "0.10",
+          "priceCurrency": "USD",
+          "description": "Per page processed."
+        },
+        {
+          "@type": "Offer",
+          "name": "Unlimited",
+          "price": "250",
+          "priceCurrency": "USD",
+          "description": "Unlimited files per month. Fair usage applies."
+        }
+      ],
+      "featureList": [
+        "Narrative medical summary",
+        "Dated medical chronology",
+        "Page-level citations to the source PDF",
+        "Excel and Word export",
+        "HIPAA and PIPEDA compliant processing"
+      ],
+      "screenshot": "https://octopuslm.co/1.png",
+      "provider": {
+        "@type": "Organization",
+        "name": "Neopric Inc.",
+        "url": "https://octopuslm.co",
+        "logo": "https://octopuslm.co/logo.svg",
+        "sameAs": ["https://www.linkedin.com/company/clinexa-co"]
+      }
+    }
+    </script>
+
+    <!-- Structured Data — Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Neopric Inc.",
+      "alternateName": "OctopusLM",
+      "url": "https://octopuslm.co",
+      "logo": "https://octopuslm.co/logo.svg",
+      "description": "Neopric Inc. builds OctopusLM, medical-legal AI software that turns PDF medical records into summaries and chronologies.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Sales",
+        "url": "https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/"
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+
+        /* Soft glow behind the hero headline */
+        .hero-glow::before {
+            content: '';
+            position: absolute;
+            top: -180px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.18) 0%, transparent 65%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Responsive 16:9 video wrapper */
+        .video-frame {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: #000;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Click-to-play facade: shows the real video thumbnail and only loads
+           the YouTube player on click. Keeps the page fast (no third-party
+           iframe on first paint) and avoids YouTube's embed restrictions when
+           the file is previewed over file:// instead of http(s). */
+        .video-poster {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            background-color: #000;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-poster::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.25);
+            transition: background 0.2s ease;
+        }
+
+        .video-poster:hover::after {
+            background: rgba(15, 23, 42, 0.1);
+        }
+
+        .video-poster .play-btn {
+            position: relative;
+            z-index: 1;
+            width: 74px;
+            height: 74px;
+            border-radius: 9999px;
+            background: #0ea5e9;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 10px 30px -6px rgba(14, 165, 233, 0.6);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .video-poster:hover .play-btn {
+            transform: scale(1.08);
+            background: #38bdf8;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- ─── Nav ──────────────────────────────────────────────────────────── -->
+    <nav class="sticky top-0 z-50 bg-dark-900/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <span class="font-heading font-bold text-white text-xl tracking-tight">Octopus<span
+                        class="text-brand-400">LM</span></span>
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="#how-it-works" class="hidden sm:block text-sm text-gray-300 hover:text-white transition-colors">How
+                    it Works</a>
+                <a href="#pricing" class="hidden sm:block text-sm text-gray-300 hover:text-white transition-colors">Pricing</a>
+                <a href="https://app.octopuslm.co/login" class="text-sm text-gray-300 hover:text-white transition-colors">Log
+                    In</a>
+                <a href="https://app.octopuslm.co/signup"
+                    class="px-4 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">
+                    Try It Free
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ─── Hero ─────────────────────────────────────────────────────── -->
+        <section class="relative hero-glow overflow-hidden">
+            <div class="relative z-10 max-w-4xl mx-auto px-6 pt-20 pb-14 text-center">
+                <h1 class="font-heading font-extrabold text-white text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight">
+                    Upload PDF medical records.<br>
+                    <span class="text-brand-400">Get a narrative summary and chronology.</span>
+                </h1>
+
+                <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    Every line cites the exact page it came from, so you can verify it in seconds.
+                    Built for IME physicians, legal nurse consultants, and attorneys.
+                </p>
+
+                <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="https://app.octopuslm.co/signup"
+                        class="w-full sm:w-auto px-7 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        Try It Free
+                    </a>
+                    <a href="#demo"
+                        class="w-full sm:w-auto px-7 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-lg transition-colors">
+                        <i class="fa-solid fa-play text-xs mr-2"></i>Watch the 3-min demo
+                    </a>
+                </div>
+
+                <p class="mt-5 text-sm text-gray-500">
+                    $0.10/page &nbsp;·&nbsp; or $250/month unlimited &nbsp;·&nbsp; HIPAA compliant
+                </p>
+            </div>
+        </section>
+
+        <!-- ─── Demo video ───────────────────────────────────────────────── -->
+        <section id="demo" class="py-12 scroll-mt-20">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="glass-card p-3 rounded-2xl">
+                    <div class="video-frame" id="video-frame">
+                        <button class="video-poster" id="video-poster" type="button"
+                            aria-label="Play the OctopusLM walkthrough video"
+                            style="background-image: url('https://i.ytimg.com/vi/BrIBuNpk_Fc/maxresdefault.jpg');">
+                            <span class="play-btn" aria-hidden="true">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-4">
+                    The whole product in three minutes — upload to finished chronology.
+                </p>
+            </div>
+        </section>
+
+        <!-- ─── How it works ─────────────────────────────────────────────── -->
+        <section id="how-it-works" class="py-16 scroll-mt-20">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading font-bold text-white text-3xl md:text-4xl mb-3">How it works</h2>
+                    <p class="text-gray-400">Three steps from a stack of PDFs to a finished, cited chronology.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="w-12 h-12 mx-auto bg-brand-500/15 border border-brand-500/25 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-file-arrow-up text-brand-400"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-white mb-2">1. Upload</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Drop in the PDFs exactly as you received them. Out of order, mixed providers,
+                            thousands of pages — no prep needed.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 mx-auto bg-brand-500/15 border border-brand-500/25 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-wand-magic-sparkles text-brand-400"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-white mb-2">2. It reads every page</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Diagnoses, treatments, providers, and dates are pulled out and put in
+                            chronological order automatically.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 mx-auto bg-brand-500/15 border border-brand-500/25 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-file-lines text-brand-400"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-white mb-2">3. Review and export</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Read the summary, click any citation to jump to the source page, edit what you
+                            want, then export to Word or Excel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Pricing ──────────────────────────────────────────────────── -->
+        <section id="pricing" class="py-16 scroll-mt-20">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading font-bold text-white text-3xl md:text-4xl mb-3">Simple pricing</h2>
+                    <p class="text-gray-400">One rate to try it. One flat fee to run your practice.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 items-stretch">
+
+                    <!-- Pay As You Go -->
+                    <div class="glass-card p-7 rounded-2xl flex flex-col">
+                        <h3 class="font-heading font-bold text-white text-xl mb-1">Pay As You Go</h3>
+                        <p class="text-sm text-gray-400 mb-5">Try it on a real file today.</p>
+
+                        <div class="flex items-baseline gap-1 mb-6">
+                            <span class="font-heading text-4xl font-bold text-white">$0.10</span>
+                            <span class="text-gray-400 text-sm">/page</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8 flex-grow">
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-400 text-xs mt-1"></i>
+                                <span>Narrative summary + chronology</span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-400 text-xs mt-1"></i>
+                                <span>Page-level citations</span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-400 text-xs mt-1"></i>
+                                <span>Word &amp; Excel export</span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-400 text-xs mt-1"></i>
+                                <span>No commitment, no minimum</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://app.octopuslm.co/signup"
+                            class="block text-center px-5 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-lg transition-colors mt-auto">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Unlimited (featured) -->
+                    <div
+                        class="glass-card p-7 rounded-2xl flex flex-col relative border-2 border-brand-500/60 bg-gradient-to-b from-brand-900/25 to-dark-900/60 md:-mt-3 md:mb-[-0.75rem]">
+                        <div
+                            class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-[11px] font-bold tracking-wide px-3 py-1 rounded-full whitespace-nowrap">
+                            MOST POPULAR
+                        </div>
+
+                        <h3 class="font-heading font-bold text-white text-xl mb-1 mt-1">Unlimited</h3>
+                        <p class="text-sm text-brand-200 mb-5">Stop counting pages.</p>
+
+                        <div class="flex items-baseline gap-1 mb-6">
+                            <span class="font-heading text-4xl font-bold text-white">$250</span>
+                            <span class="text-gray-300 text-sm">/month</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-gray-200 mb-4 flex-grow">
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-300 text-xs mt-1"></i>
+                                <span><strong class="text-white">Unlimited files and pages</strong></span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-300 text-xs mt-1"></i>
+                                <span>No per-page math, no surprise invoices</span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-300 text-xs mt-1"></i>
+                                <span>Everything in Pay As You Go</span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-300 text-xs mt-1"></i>
+                                <span>Priority email support</span>
+                            </li>
+                        </ul>
+
+                        <p class="text-[11px] text-gray-400 mb-6 leading-relaxed">
+                            Fair usage applies — intended for one professional's own caseload.
+                        </p>
+
+                        <a href="https://app.octopuslm.co/signup"
+                            class="block text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors mt-auto">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Insurance & Legal -->
+                    <div class="glass-card p-7 rounded-2xl flex flex-col">
+                        <h3 class="font-heading font-bold text-white text-xl mb-1">Insurance &amp; Legal</h3>
+                        <p class="text-sm text-gray-400 mb-5">Teams and deeper analysis.</p>
+
+                        <div class="flex items-baseline gap-1 mb-6">
+                            <span class="font-heading text-4xl font-bold text-white">Custom</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8 flex-grow">
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-400 text-xs mt-1"></i>
+                                <span>Multi-user accounts &amp; case sharing</span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-400 text-xs mt-1"></i>
+                                <span>Causation analysis (Bradford Hill)</span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-400 text-xs mt-1"></i>
+                                <span>Claims intelligence &amp; risk scoring</span>
+                            </li>
+                            <li class="flex gap-2.5">
+                                <i class="fa-solid fa-check text-brand-400 text-xs mt-1"></i>
+                                <span>Deposition prep &amp; volume rates</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="block text-center px-5 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-lg transition-colors mt-auto">
+                            Contact Sales
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Trust strip ──────────────────────────────────────────────── -->
+        <section aria-labelledby="trust-heading" class="py-12 border-t border-white/5">
+            <h2 id="trust-heading" class="sr-only">Security and privacy</h2>
+            <div class="max-w-5xl mx-auto px-6 grid sm:grid-cols-3 gap-8 text-center">
+                <div>
+                    <i class="fa-solid fa-shield-halved text-brand-400 text-xl mb-3" aria-hidden="true"></i>
+                    <h3 class="text-white font-semibold text-sm mb-1">HIPAA &amp; PIPEDA compliant</h3>
+                    <p class="text-gray-500 text-sm">Encrypted in transit and at rest.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-quote-right text-brand-400 text-xl mb-3" aria-hidden="true"></i>
+                    <h3 class="text-white font-semibold text-sm mb-1">Verifiable output</h3>
+                    <p class="text-gray-500 text-sm">Every finding links to its source page.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user-lock text-brand-400 text-xl mb-3" aria-hidden="true"></i>
+                    <h3 class="text-white font-semibold text-sm mb-1">Your records stay yours</h3>
+                    <p class="text-gray-500 text-sm">Never used to train models.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Closing CTA ──────────────────────────────────────────────── -->
+        <section class="py-20">
+            <div class="max-w-2xl mx-auto px-6 text-center">
+                <h2 class="font-heading font-bold text-white text-3xl mb-4">Run one real file.</h2>
+                <p class="text-gray-400 mb-8">
+                    That's the fastest way to know if this is useful to you. Takes about five minutes.
+                </p>
+                <a href="https://app.octopuslm.co/signup"
+                    class="inline-block px-8 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                    Try It Free
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ─── Footer ───────────────────────────────────────────────────────── -->
+    <footer class="border-t border-white/5 py-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-5">
+            <div class="text-gray-400 text-sm">
+                <span class="font-heading font-bold text-white">Octopus<span
+                        class="text-brand-400">LM</span></span>
+                — a product of <span class="text-gray-300">Neopric Inc.</span>
+            </div>
+
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="blog/index.html" class="hover:text-white transition-colors">Blog</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+                <a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                    rel="noopener noreferrer" class="hover:text-white transition-colors">Book a demo</a>
+                <a href="https://www.linkedin.com/company/clinexa-co" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn" class="hover:text-white transition-colors">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <p class="text-center text-gray-600 text-xs mt-6">
+            &copy; 2026 Neopric Inc. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Font Awesome (deferred — icons are decorative) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+
+    <script>
+        // Click-to-play video.
+        //
+        // Over http(s) the YouTube player is injected inline and autoplays.
+        // Over file:// YouTube refuses to embed (no valid referrer — "Error 153"),
+        // so we open the video on youtube.com instead. That keeps local previews
+        // of this file working without ever showing a player error.
+        (function () {
+            var VIDEO_ID = 'BrIBuNpk_Fc';
+            var poster = document.getElementById('video-poster');
+            if (!poster) return;
+
+            poster.addEventListener('click', function () {
+                var canEmbed = location.protocol === 'http:' || location.protocol === 'https:';
+
+                if (!canEmbed) {
+                    window.open('https://www.youtube.com/watch?v=' + VIDEO_ID, '_blank', 'noopener');
+                    return;
+                }
+
+                var iframe = document.createElement('iframe');
+                iframe.src = 'https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?autoplay=1&rel=0';
+                iframe.title = 'OctopusLM — 3 minute walkthrough';
+                iframe.allow =
+                    'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                iframe.allowFullscreen = true;
+                poster.replaceWith(iframe);
+            });
+        })();
+    </script>
+</body>
+
+</html>
