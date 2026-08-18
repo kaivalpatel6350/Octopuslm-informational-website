@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>60 AI Prompts for IME Physicians Reviewing Medical Records | OctopusLM</title>
+    <meta name="title" content="60 AI Prompts for IME Physicians Reviewing Medical Records">
+    <meta name="description" content="Practical prompts to accelerate your medical record review while maintaining clinical accuracy and defensibility">
+    <meta name="keywords" content="60 ai prompts for ime physicians reviewing medical records, medical record review, IME, medical chronology, legal nurse consultant, OctopusLM">
+    <meta name="author" content="OctopusLM Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://octopuslm.co/blog/60-ai-prompts-ime-physicians.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://octopuslm.co/blog/60-ai-prompts-ime-physicians.html">
+    <meta property="og:title" content="60 AI Prompts for IME Physicians Reviewing Medical Records">
+    <meta property="og:description" content="Practical prompts to accelerate your medical record review while maintaining clinical accuracy and defensibility">
+    <meta property="og:image" content="https://octopuslm.co/1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://octopuslm.co/blog/60-ai-prompts-ime-physicians.html">
+    <meta property="twitter:title" content="60 AI Prompts for IME Physicians Reviewing Medical Records">
+    <meta property="twitter:description" content="Practical prompts to accelerate your medical record review while maintaining clinical accuracy and defensibility">
+    <meta property="twitter:image" content="https://octopuslm.co/1.png">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "60 AI Prompts for IME Physicians Reviewing Medical Records",
+      "description": "Practical prompts to accelerate your medical record review while maintaining clinical accuracy and defensibility",
+      "author": {
+            "@type": "Organization",
+            "name": "OctopusLM"
+      },
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "image": "https://octopuslm.co/1.png",
+      "mainEntityOfPage": "https://octopuslm.co/blog/60-ai-prompts-ime-physicians.html",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Neopric Inc.",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://octopuslm.co/logo.svg"
+            }
+      }
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prose h2 {
+            color: #fff;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h3 {
+            color: #e0f2fe;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h4 {
+            color: #e0f2fe;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose p {
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose ul,
+        .prose ol {
+            color: #cbd5e1;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            list-style: disc;
+        }
+
+        .prose ol {
+            list-style: decimal;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .prose a {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        .prose a:hover {
+            color: #7dd3fc;
+        }
+
+        .prose hr {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2.5rem 0;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #0ea5e9;
+            padding-left: 1.25rem;
+            margin: 1.5rem 0;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .prose code {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.375rem;
+            padding: 0.125rem 0.375rem;
+            font-size: 0.875em;
+            color: #7dd3fc;
+        }
+
+        .prose pre {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+        }
+
+        .prose pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: #bae6fd;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .prose table th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prose table td {
+            color: #cbd5e1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .prose table tr:nth-child(even) td {
+            background: rgba(30, 41, 59, 0.3);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Gradients -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-panel border-b border-white/5 bg-dark-900/90 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                        <a href="../index.html#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                        <a href="index.html" class="text-brand-400 transition-colors">Blog</a>
+                        <a href="../press/index.html" class="hover:text-white transition-colors">Press</a>
+                        <a href="../index.html#pricing" class="hover:text-white transition-colors">Pricing</a>
+                        <a href="https://app.octopuslm.co/login" class="hover:text-white transition-colors">Log In</a>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="https://app.octopuslm.co/signup"
+                            class="hidden md:block px-5 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">
+                            Try It Free
+                        </a>
+                        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2"
+                            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-4">
+                    <a href="../index.html#how-it-works" class="block text-gray-300 hover:text-white">How it Works</a>
+                    <a href="index.html" class="block text-gray-300 hover:text-white">Blog</a>
+                    <a href="../press/index.html" class="block text-gray-300 hover:text-white">Press</a>
+                    <a href="../index.html#pricing" class="block text-gray-300 hover:text-white">Pricing</a>
+                    <a href="https://app.octopuslm.co/login" class="block text-gray-300 hover:text-white">Log In</a>
+                    <a href="https://app.octopuslm.co/signup"
+                        class="block w-full text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        Try It Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+    </script>
+
+    <!-- Article -->
+    <article class="relative z-10 pt-40 pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="../index.html" class="hover:text-brand-400 transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">60 AI Prompts for IME Physicians Reviewing Medical Records</span>
+            </nav>
+
+            <!-- Category & Title -->
+            <div
+                class="inline-block px-3 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-300 text-xs font-medium uppercase tracking-wider mb-6">
+                AI Prompts
+            </div>
+
+            <h1 class="text-4xl lg:text-5xl font-heading font-bold leading-tight text-white mb-6">
+                60 AI Prompts for IME Physicians Reviewing Medical Records
+            </h1>
+
+            <div class="flex items-center gap-6 text-sm text-gray-400 mb-12 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>August 18, 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>11 min read</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>OctopusLM Team</span>
+                </div>
+            </div>
+
+            <!-- Article Content -->
+            <div class="prose max-w-none">
+<p><em>Practical prompts to accelerate your medical record review while maintaining clinical accuracy and defensibility</em></p>
+<hr>
+<p>Independent Medical Examinations demand precision. You&#39;re reviewing hundreds of pages, identifying causation, assessing impairment, and producing a report that will be scrutinized by opposing counsel. AI can accelerate this process—but only if you prompt it correctly.</p>
+<p>These 60 prompts are organized by the actual workflow of an IME physician: from initial record triage through causation analysis, impairment rating, and report drafting. Each prompt is designed to extract clinically relevant information while flagging what needs your expert judgment.</p>
+<hr>
+<h2><strong>Record Triage &amp; Organization</strong></h2>
+<h3>1. Initial Record Assessment</h3>
+<pre><code>Summarize the volume and types of medical records in this file. 
+List each provider, date range, and approximate page count. 
+Identify any obvious gaps in the treatment timeline.
+</code></pre>
+<h3>2. Provider Timeline Construction</h3>
+<pre><code>Create a chronological timeline of all healthcare providers seen by 
+this claimant. Include: provider name, specialty, first visit date, 
+last visit date, and primary reason for treatment.
+</code></pre>
+<h3>3. Identifying Key Records</h3>
+<pre><code>Which records in this file are most relevant to the claimed injury 
+date of [DATE]? List the documents that reference the incident 
+or immediate post-injury treatment.
+</code></pre>
+<h3>4. Missing Records Detection</h3>
+<pre><code>Based on the treatment timeline, what records appear to be missing? 
+Consider: referral patterns, typical diagnostic workup for this 
+injury type, and gaps between provider visits exceeding 30 days.
+</code></pre>
+<h3>5. Duplicate Record Identification</h3>
+<pre><code>Flag any records that appear to be duplicates. Compare: dates, 
+provider names, visit types, and clinical content. Do NOT flag 
+records that are true follow-up visits.
+</code></pre>
+<h3>6. Pre-Injury Medical History Extraction</h3>
+<pre><code>Extract all medical records dated BEFORE the claimed injury date. 
+Summarize: conditions treated, medications prescribed, healthcare 
+providers seen, and any relevant diagnostic findings.
+</code></pre>
+<h3>7. Post-Injury Treatment Summary</h3>
+<pre><code>Summarize all treatment received AFTER the claimed injury date. 
+Organize by: acute care (first 72 hours), subacute phase (weeks 1-6), 
+and chronic phase (beyond 6 weeks).
+</code></pre>
+<h3>8. Referral Pattern Analysis</h3>
+<pre><code>Map the referral pattern: who referred the patient to whom, when, 
+and for what stated reason? Identify any referrals that seem 
+clinically unusual or potentially unnecessary.
+</code></pre>
+<hr>
+<h2><strong>Clinical Content Extraction</strong></h2>
+<h3>9. Chief Complaint Tracking</h3>
+<pre><code>Extract the chief complaint from each visit. Track how it evolves 
+over time. Note any discrepancies between documented complaints 
+and claimed disability.
+</code></pre>
+<h3>10. Symptom Documentation</h3>
+<pre><code>List every symptom documented in the medical records. Include: 
+date first reported, frequency of mention, severity descriptors, 
+and any changes over time.
+</code></pre>
+<h3>11. Physical Examination Findings</h3>
+<pre><code>Extract all physical examination findings. Organize by body system. 
+Highlight: objective findings (e.g., ROM measurements, reflexes), 
+subjective findings, and any inconsistencies across providers.
+</code></pre>
+<h3>12. Diagnostic Test Results</h3>
+<pre><code>Compile all diagnostic test results: imaging, lab work, nerve 
+conduction studies, etc. For each test, note: date, type, findings, 
+and who interpreted the results.
+</code></pre>
+<h3>13. Medication History</h3>
+<pre><code>Create a complete medication history. For each medication, include: 
+name, dosage, prescribing provider, start date, end date (if known), 
+and indication.
+</code></pre>
+<h3>14. Procedure and Surgery History</h3>
+<pre><code>List all procedures and surgeries. For each: date, procedure name, 
+provider, indication, complications (if any), and outcome.
+</code></pre>
+<h3>15. Work Status Documentation</h3>
+<pre><code>Extract all work status restrictions. Track: date, provider, 
+restrictions given, duration, and any changes over time. Note 
+any discrepancies between restrictions and functional capacity.
+</code></pre>
+<h3>16. Pain Scale Tracking</h3>
+<pre><code>Document every pain scale rating in the records. Note: date, 
+context (rest vs. activity), and any analgesic use at time of 
+rating. Track trends over time.
+</code></pre>
+<hr>
+<h2><strong>Causation Analysis</strong></h2>
+<h3>17. Mechanism of Injury Documentation</h3>
+<pre><code>Extract all descriptions of the injury mechanism. Note: source 
+(patient report, witness statement, incident report), date of 
+documentation, and any inconsistencies between accounts.
+</code></pre>
+<h3>18. Temporal Relationship Assessment</h3>
+<pre><code>Analyze the temporal relationship between the claimed event and 
+onset of symptoms. Document: first symptom report, time lag 
+between event and treatment, and any pre-existing symptoms.
+</code></pre>
+<h3>19. Pre-Existing Condition Identification</h3>
+<pre><code>Identify any pre-existing conditions relevant to the claimed injury. 
+For each: condition name, evidence in pre-injury records, treating 
+provider, and whether it was symptomatic before the event.
+</code></pre>
+<h3>20. Aggravation vs. Exacerbation Analysis</h3>
+<pre><code>Based on the records, distinguish between: (1) new injury, 
+(2) aggravation of pre-existing condition, or (3) temporary 
+exacerbation. Cite specific clinical evidence for your conclusion.
+</code></pre>
+<h3>21. Diagnostic Evidence for Causation</h3>
+<pre><code>What diagnostic evidence supports or refutes causation? Consider: 
+imaging findings, objective clinical findings, and whether 
+diagnostics are consistent with the claimed mechanism.
+</code></pre>
+<h3>22. Alternative Causation Hypotheses</h3>
+<pre><code>Are there alternative explanations for the claimant&#39;s condition 
+besides the claimed event? Consider: degenerative changes, 
+pre-existing conditions, subsequent injuries, or non-organic factors.
+</code></pre>
+<h3>23. Maximum Medical Improvement (MMI) Assessment</h3>
+<pre><code>Based on the treatment records, when did the claimant reach 
+MMI? Cite: plateau in improvement, cessation of active treatment, 
+and any provider statements regarding prognosis.
+</code></pre>
+<hr>
+<h2><strong>Functional Capacity &amp; Disability</strong></h2>
+<h3>24. Activities of Daily Living (ADL) Documentation</h3>
+<pre><code>Extract all documentation of ADL limitations. Include: specific 
+activities affected, degree of limitation, source of information, 
+and any objective corroboration.
+</code></pre>
+<h3>25. Employment History Analysis</h3>
+<pre><code>Summarize the claimant&#39;s employment history. Include: job titles, 
+physical demands, dates worked, and reason for leaving each position. 
+Note any work-related injuries.
+</code></pre>
+<h3>26. Functional Capacity Evaluation (FCE) Analysis</h3>
+<pre><code>If an FCE was performed, summarize: date, type, results, and 
+validity indicators. Note any discrepancies between FCE findings 
+and clinical examination.
+</code></pre>
+<h3>27. Work Restriction Reasonableness</h3>
+<pre><code>Are the documented work restrictions clinically reasonable given 
+the objective findings? Identify any restrictions that lack 
+clinical justification or appear excessive.
+</code></pre>
+<h3>28. Disability Duration Analysis</h3>
+<pre><code>Calculate total duration of disability. Distinguish between: 
+total disability, partial disability, and able-to-work periods. 
+Note any discrepancies with treatment timeline.
+</code></pre>
+<h3>29. Secondary Gain Indicators</h3>
+<pre><code>Flag any potential secondary gain indicators in the records. 
+Consider: litigation history, disability applications, workers&#39; 
+comp claims, and inconsistencies in symptom reporting.
+</code></pre>
+<hr>
+<h2><strong>Impairment Rating Preparation</strong></h2>
+<h3>30. Impairment Rating Methodology Selection</h3>
+<pre><code>Based on the jurisdiction and injury type, which impairment rating 
+guides should be used? (AMA Guides 5th/6th, state-specific, etc.) 
+Cite the rationale for methodology selection.
+</code></pre>
+<h3>31. Objective Findings for Impairment</h3>
+<pre><code>List all objective clinical findings that can be used for 
+impairment rating. For each: cite the specific examination finding, 
+date, and which guide section applies.
+</code></pre>
+<h3>32. ROM Measurements Compilation</h3>
+<pre><code>Compile all range of motion measurements. Include: date, joint, 
+motion type, degrees, and examiner. Note any significant 
+variability between measurements.
+</code></pre>
+<h3>33. Neurological Deficit Documentation</h3>
+<pre><code>Document all neurological deficits. Include: type (sensory, motor, 
+reflex), distribution, severity, and objective evidence (EMG, 
+clinical exam).
+</code></pre>
+<h3>34. Pain-Related Impairment Considerations</h3>
+<pre><code>If pain is a component of impairment, document: location, severity, 
+chronicity, and whether it meets criteria for pain-related impairment 
+under the applicable guides.
+</code></pre>
+<h3>35. Pre-Existing Impairment Calculation</h3>
+<pre><code>Calculate any pre-existing impairment. Use pre-injury records to 
+establish baseline. Document methodology and apportionment rationale.
+</code></pre>
+<h3>36. Maximum Impairment Assessment</h3>
+<pre><code>What is the maximum impairment rating supported by objective 
+findings? Cite specific guide sections and clinical evidence. 
+Note any areas of clinical judgment.
+</code></pre>
+<hr>
+<h2><strong>Consistency &amp; Credibility Analysis</strong></h2>
+<h3>37. Symptom-Consistency Check</h3>
+<pre><code>Are the reported symptoms consistent with the objective findings 
+and diagnosed condition? Flag any inconsistencies between subjective 
+complaints and clinical evidence.
+</code></pre>
+<h3>38. Cross-Provider Consistency</h3>
+<pre><code>Compare clinical findings across different providers. Identify: 
+consistent findings, inconsistent findings, and findings that 
+appear or disappear without explanation.
+</code></pre>
+<h3>39. Waddell Sign Assessment</h3>
+<pre><code>Document any positive Waddell signs or other non-organic physical 
+findings. Note: which signs, when observed, by whom, and clinical 
+context.
+</code></pre>
+<h3>40. Symptom Magnification Indicators</h3>
+<pre><code>Flag any indicators of symptom magnification. Consider: 
+inconsistent examination findings, disproportionate pain behavior, 
+and discrepancies between reported and observed function.
+</code></pre>
+<h3>41. Treatment Compliance Analysis</h3>
+<pre><code>Assess treatment compliance. Document: missed appointments, 
+non-compliance with recommendations, and any patterns of 
+treatment-seeking behavior.
+</code></pre>
+<h3>42. Return-to-Work Barriers</h3>
+<pre><code>What barriers to return-to-work are documented? Distinguish 
+between: medical barriers, psychological barriers, and 
+non-medical barriers (e.g., job availability, employer issues).
+</code></pre>
+<hr>
+<h2><strong>Report Drafting Assistance</strong></h2>
+<h3>43. Executive Summary Draft</h3>
+<pre><code>Draft a one-paragraph executive summary of this IME. Include: 
+injury date, diagnosis, causation opinion, current functional 
+status, and impairment rating (if applicable).
+</code></pre>
+<h3>44. History of Present Illness Section</h3>
+<pre><code>Draft the History of Present Illness section. Include: mechanism 
+of injury, immediate symptoms, treatment timeline, and current 
+status. Cite specific records for each fact.
+</code></pre>
+<h3>45. Past Medical History Summary</h3>
+<pre><code>Summarize the Past Medical History. Organize by: relevant 
+pre-existing conditions, prior injuries, surgeries, and current 
+medications. Note relevance to claimed injury.
+</code></pre>
+<h3>46. Physical Examination Findings Section</h3>
+<pre><code>Draft the Physical Examination Findings section. Include: 
+general appearance, vital signs, and system-specific findings. 
+Distinguish between objective and subjective findings.
+</code></pre>
+<h3>47. Diagnostic Studies Summary</h3>
+<pre><code>Summarize all diagnostic studies. For each: date, type, findings, 
+and clinical significance. Note any studies that were recommended 
+but not performed.
+</code></pre>
+<h3>48. Causation Opinion Formulation</h3>
+<pre><code>Draft the causation opinion section. State: whether the condition 
+was caused by, aggravated by, or unrelated to the claimed event. 
+Cite specific evidence supporting this opinion.
+</code></pre>
+<h3>49. Functional Capacity Opinion</h3>
+<pre><code>Draft the functional capacity opinion. State: current work 
+capacity, specific restrictions (if any), and whether restrictions 
+are temporary or permanent.
+</code></pre>
+<h3>50. Impairment Rating Explanation</h3>
+<pre><code>Draft the impairment rating explanation. Include: methodology used, 
+specific findings rated, calculations, and final whole person 
+impairment percentage.
+</code></pre>
+<h3>51. Prognosis Statement</h3>
+<pre><code>Draft the prognosis statement. Include: expected course, potential 
+for further improvement, anticipated treatment needs, and any 
+factors affecting prognosis.
+</code></pre>
+<h3>52. Recommendations Section</h3>
+<pre><code>Draft the recommendations section. Include: further diagnostic 
+studies, treatment recommendations, work restrictions, and 
+follow-up timeline.
+</code></pre>
+<hr>
+<h2><strong>Quality Assurance &amp; Review</strong></h2>
+<h3>53. Citation Verification</h3>
+<pre><code>Verify that every clinical statement in the draft report has a 
+corresponding citation to the medical records. Flag any 
+uncited statements.
+</code></pre>
+<h3>54. Opinion Consistency Check</h3>
+<pre><code>Review the draft report for internal consistency. Check: do the 
+opinions align with the documented findings? Are there any 
+contradictions between sections?
+</code></pre>
+<h3>55. Defensibility Review</h3>
+<pre><code>Review the draft report for defensibility. Consider: Are all 
+opinions supported by evidence? Are alternative explanations 
+addressed? Is the reasoning clear?
+</code></pre>
+<h3>56. Missing Information Flag</h3>
+<pre><code>What critical information is missing from the records that would 
+strengthen or clarify the IME opinion? List specific documents 
+or diagnostic studies needed.
+</code></pre>
+<h3>57. Cross-Examination Preparation</h3>
+<pre><code>Prepare for potential cross-examination questions. Identify: 
+weak points in the opinion, alternative interpretations of the 
+evidence, and areas where clinical judgment was required.
+</code></pre>
+<h3>58. Peer Review Checklist</h3>
+<pre><code>Generate a peer review checklist for this IME report. Include: 
+methodology verification, citation accuracy, opinion support, 
+and compliance with standards.
+</code></pre>
+<h3>59. Report Completeness Audit</h3>
+<pre><code>Audit the report for completeness. Check: all required sections 
+present, all records reviewed cited, all opinions stated, and 
+all recommendations clear.
+</code></pre>
+<h3>60. Final Quality Check</h3>
+<pre><code>Perform a final quality check. Verify: spelling of claimant name, 
+accuracy of dates, correct impairment calculations, and consistency 
+of terminology throughout the report.
+</code></pre>
+<hr>
+<h2><strong>How to Use These Prompts Effectively</strong></h2>
+<h3><strong>Best Practices:</strong></h3>
+<ol>
+<li><strong>Start with Triage</strong> — Use prompts 1-8 to organize the file before diving into clinical analysis</li>
+<li><strong>Extract Systematically</strong> — Work through prompts 9-16 to build your clinical foundation</li>
+<li><strong>Apply Clinical Judgment</strong> — Prompts are tools, not replacements for your expertise</li>
+<li><strong>Verify Everything</strong> — Always cross-check AI output against the original records</li>
+<li><strong>Document Your Reasoning</strong> — Use prompts 43-52 to draft, then refine with your clinical voice</li>
+</ol>
+<h3><strong>What AI Cannot Do:</strong></h3>
+<ul>
+<li>Replace your clinical examination of the claimant</li>
+<li>Make the final causation determination</li>
+<li>Apply clinical judgment to borderline findings</li>
+<li>Assess credibility during the face-to-face interview</li>
+<li>Sign the report and take professional responsibility</li>
+</ul>
+<h3><strong>What AI Does Well:</strong></h3>
+<ul>
+<li>Rapid extraction of clinical data</li>
+<li>Pattern recognition across large record sets</li>
+<li>Timeline construction and gap identification</li>
+<li>Drafting structured report sections</li>
+<li>Citation verification and cross-referencing</li>
+</ul>
+<hr>
+<h2><strong>The Bottom Line</strong></h2>
+<p>These prompts accelerate the mechanical aspects of IME record review—extracting data, organizing timelines, and drafting structured sections. But the core of an IME remains your clinical expertise: examining the claimant, interpreting findings in context, and rendering opinions you can defend under cross-examination.</p>
+<p>Use AI as a force multiplier, not a replacement. Your signature on that report means you stand behind every word.</p>
+<hr>
+<p><em>Need help implementing AI in your IME practice? Contact us to discuss workflow integration that maintains clinical accuracy and defensibility.</em></p>
+
+            </div>
+
+            <!-- Related Posts -->
+            <div class="mt-16 pt-16 border-t border-white/10">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8">Related Articles</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="60-ai-prompts-plaintiff-pi-lawyers.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">60 AI Prompts for Plaintiff Personal Injury Lawyers</h4>
+                        <p class="text-sm text-gray-400">Strategic prompts to strengthen your case from intake through trial</p>
+                    </a>
+                    <a href="122-ime-questions.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">122 Questions to Ask Any IME Medical File</h4>
+                        <p class="text-sm text-gray-400">The complete question library we use for independent medical examination record review — 73 universal…</p>
+                    </a>
+                    <a href="psychiatry-prompts.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">25 AI Prompts for Psychiatric IME Record Review</h4>
+                        <p class="text-sm text-gray-400">Twenty-five prompts for reviewing psychiatric records in an independent medical examination — history,…</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="relative z-10 py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-brand-600">
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready to transform your workflow?
+            </h2>
+            <p class="text-xl text-brand-100 mb-10">Start using AI to cut medical record review time by 70%</p>
+            <a href="../index.html#pricing"
+                class="inline-block bg-white text-brand-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-50 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                Start Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-900 pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-4">
+                        HIPAA/PIPEDA compliant AI medical analysis platform.
+                        Secure cloud processing built for medical experts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../index.html#how-it-works" class="hover:text-brand-400 transition-colors">How it Works</a></li>
+                        <li><a href="../index.html#demo" class="hover:text-brand-400 transition-colors">Demo</a></li>
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a></li>
+                        <li><a href="../press/index.html" class="hover:text-brand-400 transition-colors">Press</a></li>
+                        <li><a href="../index.html#pricing" class="hover:text-brand-400 transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">Book a Demo</a></li>
+                        <li><a href="https://www.linkedin.com/company/clinexa-co" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2026 Neopric Inc, Canada. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

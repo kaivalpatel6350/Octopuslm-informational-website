@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Reviewing MVA Records: Why Multi-Provider Files Break Chronologies | OctopusLM</title>
+    <meta name="title" content="Reviewing MVA Records: Why Multi-Provider Files Break Chronologies">
+    <meta name="description" content="You've received a 400-page MVA file. The plaintiff treated with their family doctor, two physiotherapy clinics, a chiropractor, a pain management specialist,…">
+    <meta name="keywords" content="reviewing mva records: why multi-provider files break chronologies, medical record review, IME, medical chronology, legal nurse consultant, OctopusLM">
+    <meta name="author" content="OctopusLM Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://octopuslm.co/blog/reviewing-mva-records-multi-provider.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://octopuslm.co/blog/reviewing-mva-records-multi-provider.html">
+    <meta property="og:title" content="Reviewing MVA Records: Why Multi-Provider Files Break Chronologies">
+    <meta property="og:description" content="You've received a 400-page MVA file. The plaintiff treated with their family doctor, two physiotherapy clinics, a chiropractor, a pain management specialist,…">
+    <meta property="og:image" content="https://octopuslm.co/1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://octopuslm.co/blog/reviewing-mva-records-multi-provider.html">
+    <meta property="twitter:title" content="Reviewing MVA Records: Why Multi-Provider Files Break Chronologies">
+    <meta property="twitter:description" content="You've received a 400-page MVA file. The plaintiff treated with their family doctor, two physiotherapy clinics, a chiropractor, a pain management specialist,…">
+    <meta property="twitter:image" content="https://octopuslm.co/1.png">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Reviewing MVA Records: Why Multi-Provider Files Break Chronologies",
+      "description": "You've received a 400-page MVA file. The plaintiff treated with their family doctor, two physiotherapy clinics, a chiropractor, a pain management specialist,…",
+      "author": {
+            "@type": "Organization",
+            "name": "OctopusLM"
+      },
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "image": "https://octopuslm.co/1.png",
+      "mainEntityOfPage": "https://octopuslm.co/blog/reviewing-mva-records-multi-provider.html",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Neopric Inc.",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://octopuslm.co/logo.svg"
+            }
+      }
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prose h2 {
+            color: #fff;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h3 {
+            color: #e0f2fe;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h4 {
+            color: #e0f2fe;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose p {
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose ul,
+        .prose ol {
+            color: #cbd5e1;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            list-style: disc;
+        }
+
+        .prose ol {
+            list-style: decimal;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .prose a {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        .prose a:hover {
+            color: #7dd3fc;
+        }
+
+        .prose hr {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2.5rem 0;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #0ea5e9;
+            padding-left: 1.25rem;
+            margin: 1.5rem 0;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .prose code {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.375rem;
+            padding: 0.125rem 0.375rem;
+            font-size: 0.875em;
+            color: #7dd3fc;
+        }
+
+        .prose pre {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+        }
+
+        .prose pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: #bae6fd;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .prose table th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prose table td {
+            color: #cbd5e1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .prose table tr:nth-child(even) td {
+            background: rgba(30, 41, 59, 0.3);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Gradients -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-panel border-b border-white/5 bg-dark-900/90 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                        <a href="../index.html#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                        <a href="index.html" class="text-brand-400 transition-colors">Blog</a>
+                        <a href="../press/index.html" class="hover:text-white transition-colors">Press</a>
+                        <a href="../index.html#pricing" class="hover:text-white transition-colors">Pricing</a>
+                        <a href="https://app.octopuslm.co/login" class="hover:text-white transition-colors">Log In</a>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="https://app.octopuslm.co/signup"
+                            class="hidden md:block px-5 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">
+                            Try It Free
+                        </a>
+                        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2"
+                            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-4">
+                    <a href="../index.html#how-it-works" class="block text-gray-300 hover:text-white">How it Works</a>
+                    <a href="index.html" class="block text-gray-300 hover:text-white">Blog</a>
+                    <a href="../press/index.html" class="block text-gray-300 hover:text-white">Press</a>
+                    <a href="../index.html#pricing" class="block text-gray-300 hover:text-white">Pricing</a>
+                    <a href="https://app.octopuslm.co/login" class="block text-gray-300 hover:text-white">Log In</a>
+                    <a href="https://app.octopuslm.co/signup"
+                        class="block w-full text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        Try It Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+    </script>
+
+    <!-- Article -->
+    <article class="relative z-10 pt-40 pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="../index.html" class="hover:text-brand-400 transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">Reviewing MVA Records: Why Multi-Provider Files Break…</span>
+            </nav>
+
+            <!-- Category & Title -->
+            <div
+                class="inline-block px-3 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-300 text-xs font-medium uppercase tracking-wider mb-6">
+                Record Review
+            </div>
+
+            <h1 class="text-4xl lg:text-5xl font-heading font-bold leading-tight text-white mb-6">
+                Reviewing MVA Records: Why Multi-Provider Files Break Chronologies
+            </h1>
+
+            <div class="flex items-center gap-6 text-sm text-gray-400 mb-12 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>August 18, 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>8 min read</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>OctopusLM Team</span>
+                </div>
+            </div>
+
+            <!-- Article Content -->
+            <div class="prose max-w-none">
+<h2>The Problem Nobody Talks About</h2>
+<p>You&#39;ve received a 400-page MVA file. The plaintiff treated with their family doctor, two physiotherapy clinics, a chiropractor, a pain management specialist, and had two ER visits. Each provider kept their own records. Each used different date formats. Each had their own numbering system.</p>
+<p>You build your chronology. You sign your report.</p>
+<p>Then opposing counsel points out that you missed the three-week gap in treatment that coincided with a documented vacation. Or you cited the wrong provider for a critical entry. Or you attributed a finding to the wrong date because one provider used MM/DD/YYYY and another used DD/MM/YYYY.</p>
+<p><strong>This isn&#39;t a carelessness problem. It&#39;s a structure problem.</strong></p>
+<hr>
+<h2>Why Multi-Provider Files Break Down</h2>
+<h3>1. <strong>Inconsistent Date Formats</strong></h3>
+<p>Provider A: &quot;03/04/2024&quot;<br>Provider B: &quot;04/03/2024&quot;<br>Provider C: &quot;March 4, 2024&quot;</p>
+<p>When you&#39;re scanning 400 pages, your brain stops checking. You assume consistency. The record doesn&#39;t reward that assumption.</p>
+<h3>2. <strong>Duplicate Records with Variations</strong></h3>
+<p>The ER note appears in the file three times:</p>
+<ul>
+<li>Once from the hospital&#39;s EMR printout</li>
+<li>Once from the plaintiff&#39;s family doctor (who received the consult letter)</li>
+<li>Once from the insurance adjuster&#39;s packet</li>
+</ul>
+<p>Each version has slightly different formatting. One has a handwritten addendum. One is missing the second page. You cite the wrong version.</p>
+<h3>3. <strong>Overlapping Treatment Periods</strong></h3>
+<p>Physiotherapy notes say &quot;patient attended 12 sessions from January 15 to March 20.&quot;<br>Chiropractic notes say &quot;patient treated weekly from January 10 to March 25.&quot;</p>
+<p>Did they overlap? Did they conflict? Did the plaintiff double-book? The chronology needs to show this clearly, not bury it.</p>
+<h3>4. <strong>Missing Cross-Referrals</strong></h3>
+<p>The family doctor refers to the pain specialist. The pain specialist sends a letter back. The letter is filed under the pain specialist&#39;s tab, not the family doctor&#39;s. When you&#39;re reading chronologically by provider, you miss the connection.</p>
+<hr>
+<h2>How to Catch These Issues Before They Catch You</h2>
+<h3><strong>Step 1: Build a Provider Inventory First</strong></h3>
+<p>Before you read a single clinical note, create a table:</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Date Range</th>
+<th>Record Type</th>
+<th>Page Count</th>
+<th>Key Gaps</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dr. Smith (Family)</td>
+<td>01/15/24 - 06/20/24</td>
+<td>Progress notes, consult letters</td>
+<td>45 pages</td>
+<td>02/10-02/28 (vacation noted)</td>
+</tr>
+<tr>
+<td>ABC Physiotherapy</td>
+<td>01/20/24 - 03/20/24</td>
+<td>Treatment notes</td>
+<td>32 pages</td>
+<td>02/15-02/22 (no shows)</td>
+</tr>
+<tr>
+<td>City ER</td>
+<td>01/15/24</td>
+<td>ER report</td>
+<td>8 pages</td>
+<td>N/A</td>
+</tr>
+</tbody></table>
+<p>This inventory becomes your map. You&#39;ll see gaps before you start reading.</p>
+<h3><strong>Step 2: Normalize All Dates to One Format</strong></h3>
+<p>Pick one format (ISO 8601: YYYY-MM-DD is unambiguous). Convert every date in your chronology to this format. If a record is unclear, flag it: &quot;Date unclear: appears to be 03/04 or 04/03 - context suggests March 4.&quot;</p>
+<h3><strong>Step 3: Cross-Reference by Date, Not by Provider</strong></h3>
+<p>Build your chronology by date, not by provider. Each entry should show:</p>
+<ul>
+<li>Date</li>
+<li>Provider</li>
+<li>Record type</li>
+<li>Key findings</li>
+<li>Page citation (Bates number or provider page)</li>
+</ul>
+<p>This reveals overlaps, gaps, and contradictions.</p>
+<h3><strong>Step 4: Flag Duplicates Explicitly</strong></h3>
+<p>When you see the same record twice, note it:</p>
+<ul>
+<li>&quot;ER report (duplicate - see also p. 234, p. 312)&quot;</li>
+</ul>
+<p>This prevents you from citing the wrong version and shows you&#39;ve done your due diligence.</p>
+<h3><strong>Step 5: Document Gaps and Explain Them</strong></h3>
+<p>A gap isn&#39;t necessarily suspicious. But an unexplained gap is a vulnerability.</p>
+<ul>
+<li>&quot;No treatment from 02/10 to 02/28 - plaintiff&#39;s counsel notes vacation during this period.&quot;</li>
+<li>&quot;No physiotherapy from 03/01 to 03/15 - clinic notes indicate insurance authorization pending.&quot;</li>
+</ul>
+<hr>
+<h2>What This Looks Like in Practice</h2>
+<p><strong>Before (broken chronology):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Provider</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01/15/24</td>
+<td>ER</td>
+<td>MVA, cervical strain</td>
+</tr>
+<tr>
+<td>01/20/24</td>
+<td>Dr. Smith</td>
+<td>Follow-up, referred to physio</td>
+</tr>
+<tr>
+<td>01/22/24</td>
+<td>ABC Physio</td>
+<td>Initial assessment</td>
+</tr>
+<tr>
+<td>02/10/24</td>
+<td>Dr. Smith</td>
+<td>Follow-up</td>
+</tr>
+<tr>
+<td>03/05/24</td>
+<td>ABC Physio</td>
+<td>Treatment ongoing</td>
+</tr>
+</tbody></table>
+<p><strong>After (properly constructed):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Provider</th>
+<th>Record Type</th>
+<th>Finding</th>
+<th>Citation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2024-01-15</td>
+<td>City ER</td>
+<td>ER Report</td>
+<td>MVA, cervical strain, no radiculopathy</td>
+<td>p. 1-8</td>
+<td>Duplicate at p. 234, 312</td>
+</tr>
+<tr>
+<td>2024-01-20</td>
+<td>Dr. Smith</td>
+<td>Progress Note</td>
+<td>Follow-up, referred to ABC Physio</td>
+<td>p. 12</td>
+<td></td>
+</tr>
+<tr>
+<td>2024-01-22</td>
+<td>ABC Physio</td>
+<td>Initial Assessment</td>
+<td>Cervical ROM limited, pain 6/10</td>
+<td>p. 45</td>
+<td></td>
+</tr>
+<tr>
+<td>2024-02-10</td>
+<td>Dr. Smith</td>
+<td>Progress Note</td>
+<td>Follow-up, pain improved</td>
+<td>p. 15</td>
+<td></td>
+</tr>
+<tr>
+<td>2024-02-11 to 2024-02-28</td>
+<td>—</td>
+<td>—</td>
+<td>No treatment documented</td>
+<td>—</td>
+<td>Plaintiff on vacation (counsel letter, p. 400)</td>
+</tr>
+<tr>
+<td>2024-03-05</td>
+<td>ABC Physio</td>
+<td>Treatment Note</td>
+<td>ROM improved, pain 4/10</td>
+<td>p. 52</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>The AI Question Everyone Asks</h2>
+<p>&quot;Can&#39;t AI just do this for me?&quot;</p>
+<p>AI can help. But AI can also make this worse if you&#39;re not careful.</p>
+<p><strong>What AI does well:</strong></p>
+<ul>
+<li>Extracting dates and normalizing formats</li>
+<li>Identifying duplicate records</li>
+<li>Flagging gaps in treatment</li>
+</ul>
+<p><strong>What AI doesn&#39;t do well:</strong></p>
+<ul>
+<li>Understanding context (is a gap suspicious or explained?)</li>
+<li>Cross-referencing across providers</li>
+<li>Knowing which version of a duplicate is authoritative</li>
+</ul>
+<p><strong>The right approach:</strong>
+Use AI to build the first draft. Then verify every entry. Then add the context AI missed.</p>
+<hr>
+<h2>Key Takeaways</h2>
+<ol>
+<li><strong>Multi-provider files break chronologies because of structure, not carelessness.</strong></li>
+<li><strong>Build a provider inventory before you read a single note.</strong></li>
+<li><strong>Normalize all dates to one unambiguous format.</strong></li>
+<li><strong>Cross-reference by date, not by provider.</strong></li>
+<li><strong>Flag duplicates explicitly.</strong></li>
+<li><strong>Document gaps and explain them.</strong></li>
+<li><strong>Use AI for the first draft, but verify everything.</strong></li>
+</ol>
+<hr>
+<h2>What&#39;s Next?</h2>
+<p>In our next post, we&#39;ll tackle <strong>&quot;Where AI Belongs in an IME Report — and Where It Doesn&#39;t&quot;</strong> — the line between efficiency and defensibility.</p>
+<hr>
+<p><em>This post is part of our series on medical record review for IME physicians and legal nurse consultants. For more, see our <a href="#">60 AI Prompts for IME Physicians Reviewing Medical Records</a>.</em></p>
+<hr>
+<p><strong>Questions for Readers:</strong></p>
+<ul>
+<li>What&#39;s the most common chronology error you&#39;ve seen in multi-provider files?</li>
+<li>How do you handle date format inconsistencies in your practice?</li>
+<li>What&#39;s your process for flagging duplicates?</li>
+</ul>
+<hr>
+<p><em>Published: [Date]</em><br><em>Author: [Your Name]</em><br><em>Category: Medical Record Review</em><br><em>Tags: MVA records, medical chronology, IME, multi-provider files, record review</em></p>
+
+            </div>
+
+            <!-- Related Posts -->
+            <div class="mt-16 pt-16 border-t border-white/10">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8">Related Articles</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="where-ai-belongs-in-ime-report.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Where AI Belongs in an IME Report — and Where It Doesn't</h4>
+                        <p class="text-sm text-gray-400">AI is here. It's extracting dates, summarizing records, even drafting chronologies. Some examiners are using…</p>
+                    </a>
+                    <a href="speed-vs-defensibility-medical-file-review.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Speed vs. Defensibility: What You Can't Rush in a Medical File Review</h4>
+                        <p class="text-sm text-gray-400">The referring attorney needs the report by Friday. The insurance adjuster is calling. The plaintiff's…</p>
+                    </a>
+                    <a href="7-ways-medical-chronology-goes-wrong.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">7 Ways a Medical Chronology Goes Wrong (and How to Catch Them)</h4>
+                        <p class="text-sm text-gray-400">A medical chronology isn't just a list of dates and events. It's the foundation of your entire report. Every…</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="relative z-10 py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-brand-600">
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready to transform your workflow?
+            </h2>
+            <p class="text-xl text-brand-100 mb-10">Start using AI to cut medical record review time by 70%</p>
+            <a href="../index.html#pricing"
+                class="inline-block bg-white text-brand-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-50 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                Start Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-900 pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-4">
+                        HIPAA/PIPEDA compliant AI medical analysis platform.
+                        Secure cloud processing built for medical experts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../index.html#how-it-works" class="hover:text-brand-400 transition-colors">How it Works</a></li>
+                        <li><a href="../index.html#demo" class="hover:text-brand-400 transition-colors">Demo</a></li>
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a></li>
+                        <li><a href="../press/index.html" class="hover:text-brand-400 transition-colors">Press</a></li>
+                        <li><a href="../index.html#pricing" class="hover:text-brand-400 transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">Book a Demo</a></li>
+                        <li><a href="https://www.linkedin.com/company/clinexa-co" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2026 Neopric Inc, Canada. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

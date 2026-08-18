@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>7 Ways a Medical Chronology Goes Wrong (and How to Catch Them) | OctopusLM</title>
+    <meta name="title" content="7 Ways a Medical Chronology Goes Wrong (and How to Catch Them)">
+    <meta name="description" content="A medical chronology isn't just a list of dates and events. It's the foundation of your entire report. Every opinion you render — on causation, on prognosis,…">
+    <meta name="keywords" content="7 ways a medical chronology goes wrong (and how to catch them), medical record review, IME, medical chronology, legal nurse consultant, OctopusLM">
+    <meta name="author" content="OctopusLM Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://octopuslm.co/blog/7-ways-medical-chronology-goes-wrong.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://octopuslm.co/blog/7-ways-medical-chronology-goes-wrong.html">
+    <meta property="og:title" content="7 Ways a Medical Chronology Goes Wrong (and How to Catch Them)">
+    <meta property="og:description" content="A medical chronology isn't just a list of dates and events. It's the foundation of your entire report. Every opinion you render — on causation, on prognosis,…">
+    <meta property="og:image" content="https://octopuslm.co/1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://octopuslm.co/blog/7-ways-medical-chronology-goes-wrong.html">
+    <meta property="twitter:title" content="7 Ways a Medical Chronology Goes Wrong (and How to Catch Them)">
+    <meta property="twitter:description" content="A medical chronology isn't just a list of dates and events. It's the foundation of your entire report. Every opinion you render — on causation, on prognosis,…">
+    <meta property="twitter:image" content="https://octopuslm.co/1.png">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "7 Ways a Medical Chronology Goes Wrong (and How to Catch Them)",
+      "description": "A medical chronology isn't just a list of dates and events. It's the foundation of your entire report. Every opinion you render — on causation, on prognosis,…",
+      "author": {
+            "@type": "Organization",
+            "name": "OctopusLM"
+      },
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "image": "https://octopuslm.co/1.png",
+      "mainEntityOfPage": "https://octopuslm.co/blog/7-ways-medical-chronology-goes-wrong.html",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Neopric Inc.",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://octopuslm.co/logo.svg"
+            }
+      }
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prose h2 {
+            color: #fff;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h3 {
+            color: #e0f2fe;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h4 {
+            color: #e0f2fe;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose p {
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose ul,
+        .prose ol {
+            color: #cbd5e1;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            list-style: disc;
+        }
+
+        .prose ol {
+            list-style: decimal;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .prose a {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        .prose a:hover {
+            color: #7dd3fc;
+        }
+
+        .prose hr {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2.5rem 0;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #0ea5e9;
+            padding-left: 1.25rem;
+            margin: 1.5rem 0;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .prose code {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.375rem;
+            padding: 0.125rem 0.375rem;
+            font-size: 0.875em;
+            color: #7dd3fc;
+        }
+
+        .prose pre {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+        }
+
+        .prose pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: #bae6fd;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .prose table th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prose table td {
+            color: #cbd5e1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .prose table tr:nth-child(even) td {
+            background: rgba(30, 41, 59, 0.3);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Gradients -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-panel border-b border-white/5 bg-dark-900/90 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                        <a href="../index.html#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                        <a href="index.html" class="text-brand-400 transition-colors">Blog</a>
+                        <a href="../press/index.html" class="hover:text-white transition-colors">Press</a>
+                        <a href="../index.html#pricing" class="hover:text-white transition-colors">Pricing</a>
+                        <a href="https://app.octopuslm.co/login" class="hover:text-white transition-colors">Log In</a>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="https://app.octopuslm.co/signup"
+                            class="hidden md:block px-5 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">
+                            Try It Free
+                        </a>
+                        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2"
+                            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-4">
+                    <a href="../index.html#how-it-works" class="block text-gray-300 hover:text-white">How it Works</a>
+                    <a href="index.html" class="block text-gray-300 hover:text-white">Blog</a>
+                    <a href="../press/index.html" class="block text-gray-300 hover:text-white">Press</a>
+                    <a href="../index.html#pricing" class="block text-gray-300 hover:text-white">Pricing</a>
+                    <a href="https://app.octopuslm.co/login" class="block text-gray-300 hover:text-white">Log In</a>
+                    <a href="https://app.octopuslm.co/signup"
+                        class="block w-full text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        Try It Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+    </script>
+
+    <!-- Article -->
+    <article class="relative z-10 pt-40 pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="../index.html" class="hover:text-brand-400 transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">7 Ways a Medical Chronology Goes Wrong (and How to Catch…</span>
+            </nav>
+
+            <!-- Category & Title -->
+            <div
+                class="inline-block px-3 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-300 text-xs font-medium uppercase tracking-wider mb-6">
+                Record Review
+            </div>
+
+            <h1 class="text-4xl lg:text-5xl font-heading font-bold leading-tight text-white mb-6">
+                7 Ways a Medical Chronology Goes Wrong (and How to Catch Them)
+            </h1>
+
+            <div class="flex items-center gap-6 text-sm text-gray-400 mb-12 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>August 18, 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>10 min read</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>OctopusLM Team</span>
+                </div>
+            </div>
+
+            <!-- Article Content -->
+            <div class="prose max-w-none">
+<h2>The Chronology Is Your Foundation</h2>
+<p>A medical chronology isn&#39;t just a list of dates and events. It&#39;s the foundation of your entire report. Every opinion you render — on causation, on prognosis, on impairment — rests on that chronology.</p>
+<p>If the chronology is wrong, everything built on it is wrong.</p>
+<p>This post identifies the seven most common ways chronologies go wrong, and how to catch them before they catch you.</p>
+<hr>
+<h2>1. Wrong Date Format</h2>
+<p><strong>The problem:</strong> One provider uses MM/DD/YYYY. Another uses DD/MM/YYYY. You assume consistency and get burned.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Provider A: &quot;03/04/2024&quot; (March 4, 2024)</li>
+<li>Provider B: &quot;04/03/2024&quot; (March 4, 2024)</li>
+<li>Your chronology: &quot;Treatment on April 3, 2024&quot;</li>
+</ul>
+<p><strong>How to catch it:</strong></p>
+<ul>
+<li>Normalize all dates to ISO 8601 (YYYY-MM-DD) before building the chronology.</li>
+<li>If a date is ambiguous, flag it and resolve it by context (e.g., &quot;This note references the MVA on January 15, so 01/15/24 is January 15, not January 5&quot;).</li>
+</ul>
+<p><strong>The fix:</strong></p>
+<ul>
+<li>Use AI to extract and normalize dates.</li>
+<li>Manually verify ambiguous dates.</li>
+</ul>
+<hr>
+<h2>2. Duplicate Records Treated as Separate Events</h2>
+<p><strong>The problem:</strong> The same record appears multiple times in the file (from different sources, with different formatting). You enter it as separate events.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>ER report appears on page 12 (from hospital EMR).</li>
+<li>Same ER report appears on page 234 (from family doctor&#39;s file).</li>
+<li>Same ER report appears on page 312 (from insurance packet).</li>
+<li>Your chronology lists three ER visits.</li>
+</ul>
+<p><strong>How to catch it:</strong></p>
+<ul>
+<li>Build a duplicate detection step into your workflow.</li>
+<li>Compare content, not just headers or dates.</li>
+<li>Flag duplicates explicitly in the chronology: &quot;ER report (duplicate - see also p. 234, p. 312).&quot;</li>
+</ul>
+<p><strong>The fix:</strong></p>
+<ul>
+<li>Use AI to flag duplicates.</li>
+<li>Manually confirm which version is authoritative.</li>
+</ul>
+<hr>
+<h2>3. Gaps Mischaracterized as Non-Compliance</h2>
+<p><strong>The problem:</strong> You see a gap in treatment. You assume the plaintiff didn&#39;t follow through.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Treatment from 01/15/24 to 02/10/24.</li>
+<li>No treatment from 02/11/24 to 02/28/24.</li>
+<li>Treatment resumes 03/01/24.</li>
+<li>Your chronology: &quot;Gap in treatment - non-compliance.&quot;</li>
+</ul>
+<p><strong>The reality:</strong> The plaintiff was on vacation. Or insurance authorization was pending. Or the plaintiff was asymptomatic.</p>
+<p><strong>How to catch it:</strong></p>
+<ul>
+<li>Before characterizing a gap, investigate:<ul>
+<li>Is there an explanation in the records?</li>
+<li>Is there a note from the provider?</li>
+<li>Is there a letter from counsel?</li>
+</ul>
+</li>
+<li>If you can&#39;t find an explanation, note that: &quot;Gap in treatment - no explanation in records.&quot;</li>
+</ul>
+<p><strong>The fix:</strong></p>
+<ul>
+<li>Don&#39;t assume. Investigate.</li>
+<li>If the gap is unexplained, say so. Don&#39;t characterize it as non-compliance without evidence.</li>
+</ul>
+<hr>
+<h2>4. Inconsistencies Not Flagged or Interpreted</h2>
+<p><strong>The problem:</strong> You see an inconsistency between the plaintiff&#39;s self-report and objective findings. You note it but don&#39;t interpret it.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Plaintiff reports pain 8/10 on 02/15/24.</li>
+<li>Physiotherapy note same day: &quot;Patient moving comfortably, no guarding.&quot;</li>
+<li>Your chronology: &quot;Pain 8/10. Physiotherapy: moving comfortably.&quot;</li>
+</ul>
+<p><strong>The problem:</strong> You&#39;ve raised a question without answering it. Opposing counsel will ask: &quot;What does this mean?&quot;</p>
+<p><strong>How to catch it:</strong></p>
+<ul>
+<li>Flag inconsistencies explicitly: &quot;Inconsistency: self-reported pain 8/10 vs. objective observation of comfortable movement.&quot;</li>
+<li>Interpret the inconsistency: &quot;This may suggest symptom magnification, or may be explained by medication timing.&quot;</li>
+</ul>
+<p><strong>The fix:</strong></p>
+<ul>
+<li>Don&#39;t just note inconsistencies. Interpret them.</li>
+<li>If you&#39;re not sure what the inconsistency means, say so: &quot;Inconsistency noted. Significance unclear without additional context.&quot;</li>
+</ul>
+<hr>
+<h2>5. Missing Records Not Identified</h2>
+<p><strong>The problem:</strong> You review what&#39;s in the file. You don&#39;t ask what&#39;s missing.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>File includes ER report, family doctor notes, and physiotherapy notes.</li>
+<li>No imaging reports.</li>
+<li>No specialist consults.</li>
+<li>Your chronology doesn&#39;t note the absence.</li>
+</ul>
+<p><strong>The problem:</strong> You&#39;ve rendered an opinion on an incomplete file. Opposing counsel will ask: &quot;Did you request the MRI? Did you request the pain management consult?&quot;</p>
+<p><strong>How to catch it:</strong></p>
+<ul>
+<li>Before finalizing the chronology, compare the file against what should be there:<ul>
+<li>Imaging studies?</li>
+<li>Specialist consults?</li>
+<li>Prior records?</li>
+</ul>
+</li>
+<li>If records are missing, note it: &quot;Imaging reports not provided. Specialist consults not provided.&quot;</li>
+</ul>
+<p><strong>The fix:</strong></p>
+<ul>
+<li>Build a &quot;missing records&quot; section into your chronology template.</li>
+<li>List what you expected to see but didn&#39;t.</li>
+</ul>
+<hr>
+<h2>6. Citations Wrong or Missing</h2>
+<p><strong>The problem:</strong> You cite a finding to a page number. The citation is wrong. Or you don&#39;t cite at all.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Your chronology: &quot;MRI shows C5-6 herniation (p. 45).&quot;</li>
+<li>The reality: The MRI report is on page 47. Page 45 is a physiotherapy note.</li>
+</ul>
+<p><strong>The problem:</strong> One wrong citation undermines every citation. Opposing counsel will question your entire chronology.</p>
+<p><strong>How to catch it:</strong></p>
+<ul>
+<li>Verify every citation before finalizing the chronology.</li>
+<li>Use Bates numbers if available.</li>
+<li>If you&#39;re unsure, flag it: &quot;Citation needs verification.&quot;</li>
+</ul>
+<p><strong>The fix:</strong></p>
+<ul>
+<li>Build a citation verification step into your workflow.</li>
+<li>Use AI to extract citations, but verify manually.</li>
+</ul>
+<hr>
+<h2>7. Chronology Built by Provider, Not by Date</h2>
+<p><strong>The problem:</strong> You build separate chronologies for each provider. You don&#39;t cross-reference by date.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Family doctor chronology: 01/15, 01/20, 02/10, 03/05.</li>
+<li>Physiotherapy chronology: 01/22, 01/29, 02/05, 02/12, 02/19, 02/26, 03/04.</li>
+<li>You don&#39;t see that the plaintiff was seeing both providers simultaneously.</li>
+</ul>
+<p><strong>The problem:</strong> You miss overlaps, contradictions, and gaps that only appear when you view the file chronologically.</p>
+<p><strong>How to catch it:</strong></p>
+<ul>
+<li>Build a single, unified chronology sorted by date.</li>
+<li>Each entry should show: date, provider, record type, finding, citation.</li>
+</ul>
+<p><strong>The fix:</strong></p>
+<ul>
+<li>Don&#39;t build separate chronologies by provider.</li>
+<li>Build one chronology, sorted by date, with provider as a column.</li>
+</ul>
+<hr>
+<h2>The Chronology Checklist</h2>
+<p>Before you finalize any chronology, run through this checklist:</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Done?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>All dates normalized to one format?</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>Duplicates flagged?</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>Gaps investigated and explained?</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>Inconsistencies flagged and interpreted?</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>Missing records identified?</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>All citations verified?</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>Chronology sorted by date, not by provider?</td>
+<td>☐</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>What This Looks Like in Practice</h2>
+<p><strong>Before (broken chronology):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Provider</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>03/04/2024</td>
+<td>Dr. Smith</td>
+<td>Follow-up</td>
+</tr>
+<tr>
+<td>04/03/2024</td>
+<td>ABC Physio</td>
+<td>Treatment</td>
+</tr>
+<tr>
+<td>03/05/2024</td>
+<td>Dr. Smith</td>
+<td>Follow-up</td>
+</tr>
+</tbody></table>
+<p><strong>After (properly constructed):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Provider</th>
+<th>Record Type</th>
+<th>Finding</th>
+<th>Citation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2024-03-04</td>
+<td>Dr. Smith</td>
+<td>Progress Note</td>
+<td>Follow-up, pain improved</td>
+<td>p. 15</td>
+<td></td>
+</tr>
+<tr>
+<td>2024-03-04</td>
+<td>ABC Physio</td>
+<td>Treatment Note</td>
+<td>ROM improved, pain 4/10</td>
+<td>p. 52</td>
+<td>Duplicate - see also p. 234</td>
+</tr>
+<tr>
+<td>2024-03-05</td>
+<td>Dr. Smith</td>
+<td>Progress Note</td>
+<td>Follow-up, referred to specialist</td>
+<td>p. 16</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Key Takeaways</h2>
+<ol>
+<li><strong>Wrong date formats create confusion. Normalize to ISO 8601.</strong></li>
+<li><strong>Duplicates treated as separate events inflate the record. Flag them.</strong></li>
+<li><strong>Gaps mischaracterized as non-compliance create liability. Investigate.</strong></li>
+<li><strong>Inconsistencies not interpreted raise questions. Answer them.</strong></li>
+<li><strong>Missing records not identified undermine opinions. List them.</strong></li>
+<li><strong>Wrong citations undermine credibility. Verify them.</strong></li>
+<li><strong>Chronologies built by provider miss overlaps. Build by date.</strong></li>
+</ol>
+<hr>
+<h2>What&#39;s Next?</h2>
+<p>In our next post, we&#39;ll tackle <strong>&quot;Handwritten Clinical Notes: What OCR Misses in Medical Records&quot;</strong> — the gaps in digitization and how to fill them.</p>
+<hr>
+<p><em>This post is part of our series on medical record review for IME physicians. For more, see our <a href="#">60 AI Prompts for IME Physicians Reviewing Medical Records</a>.</em></p>
+<hr>
+<p><strong>Questions for Readers:</strong></p>
+<ul>
+<li>What&#39;s the most common chronology error you&#39;ve seen?</li>
+<li>How do you catch errors before they become liabilities?</li>
+<li>What&#39;s your verification process?</li>
+</ul>
+<hr>
+<p><em>Published: [Date]</em><br><em>Author: [Your Name]</em><br><em>Category: Medical Record Review</em><br><em>Tags: medical chronology, record review, IME, common errors, verification</em></p>
+
+            </div>
+
+            <!-- Related Posts -->
+            <div class="mt-16 pt-16 border-t border-white/10">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8">Related Articles</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="reviewing-mva-records-multi-provider.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Reviewing MVA Records: Why Multi-Provider Files Break Chronologies</h4>
+                        <p class="text-sm text-gray-400">You've received a 400-page MVA file. The plaintiff treated with their family doctor, two physiotherapy…</p>
+                    </a>
+                    <a href="where-ai-belongs-in-ime-report.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Where AI Belongs in an IME Report — and Where It Doesn't</h4>
+                        <p class="text-sm text-gray-400">AI is here. It's extracting dates, summarizing records, even drafting chronologies. Some examiners are using…</p>
+                    </a>
+                    <a href="speed-vs-defensibility-medical-file-review.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Speed vs. Defensibility: What You Can't Rush in a Medical File Review</h4>
+                        <p class="text-sm text-gray-400">The referring attorney needs the report by Friday. The insurance adjuster is calling. The plaintiff's…</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="relative z-10 py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-brand-600">
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready to transform your workflow?
+            </h2>
+            <p class="text-xl text-brand-100 mb-10">Start using AI to cut medical record review time by 70%</p>
+            <a href="../index.html#pricing"
+                class="inline-block bg-white text-brand-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-50 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                Start Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-900 pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-4">
+                        HIPAA/PIPEDA compliant AI medical analysis platform.
+                        Secure cloud processing built for medical experts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../index.html#how-it-works" class="hover:text-brand-400 transition-colors">How it Works</a></li>
+                        <li><a href="../index.html#demo" class="hover:text-brand-400 transition-colors">Demo</a></li>
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a></li>
+                        <li><a href="../press/index.html" class="hover:text-brand-400 transition-colors">Press</a></li>
+                        <li><a href="../index.html#pricing" class="hover:text-brand-400 transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">Book a Demo</a></li>
+                        <li><a href="https://www.linkedin.com/company/clinexa-co" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2026 Neopric Inc, Canada. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

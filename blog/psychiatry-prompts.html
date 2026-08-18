@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>25 AI Prompts for Psychiatric IME Record Review | OctopusLM</title>
+    <meta name="title" content="25 AI Prompts for Psychiatric IME Record Review">
+    <meta name="description" content="Twenty-five prompts for reviewing psychiatric records in an independent medical examination — history, diagnosis, treatment, psychometrics, credibility, function, and risk. Copy them as written.">
+    <meta name="keywords" content="25 ai prompts for psychiatric ime record review, medical record review, IME, medical chronology, legal nurse consultant, OctopusLM">
+    <meta name="author" content="OctopusLM Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://octopuslm.co/blog/psychiatry-prompts.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://octopuslm.co/blog/psychiatry-prompts.html">
+    <meta property="og:title" content="25 AI Prompts for Psychiatric IME Record Review">
+    <meta property="og:description" content="Twenty-five prompts for reviewing psychiatric records in an independent medical examination — history, diagnosis, treatment, psychometrics, credibility, function, and risk. Copy them as written.">
+    <meta property="og:image" content="https://octopuslm.co/1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://octopuslm.co/blog/psychiatry-prompts.html">
+    <meta property="twitter:title" content="25 AI Prompts for Psychiatric IME Record Review">
+    <meta property="twitter:description" content="Twenty-five prompts for reviewing psychiatric records in an independent medical examination — history, diagnosis, treatment, psychometrics, credibility, function, and risk. Copy them as written.">
+    <meta property="twitter:image" content="https://octopuslm.co/1.png">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "25 AI Prompts for Psychiatric IME Record Review",
+      "description": "Twenty-five prompts for reviewing psychiatric records in an independent medical examination — history, diagnosis, treatment, psychometrics, credibility, function, and risk. Copy them as written.",
+      "author": {
+            "@type": "Organization",
+            "name": "OctopusLM"
+      },
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "image": "https://octopuslm.co/1.png",
+      "mainEntityOfPage": "https://octopuslm.co/blog/psychiatry-prompts.html",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Neopric Inc.",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://octopuslm.co/logo.svg"
+            }
+      }
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prose h2 {
+            color: #fff;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h3 {
+            color: #e0f2fe;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h4 {
+            color: #e0f2fe;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose p {
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose ul,
+        .prose ol {
+            color: #cbd5e1;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            list-style: disc;
+        }
+
+        .prose ol {
+            list-style: decimal;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .prose a {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        .prose a:hover {
+            color: #7dd3fc;
+        }
+
+        .prose hr {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2.5rem 0;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #0ea5e9;
+            padding-left: 1.25rem;
+            margin: 1.5rem 0;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .prose code {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.375rem;
+            padding: 0.125rem 0.375rem;
+            font-size: 0.875em;
+            color: #7dd3fc;
+        }
+
+        .prose pre {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+        }
+
+        .prose pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: #bae6fd;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .prose table th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prose table td {
+            color: #cbd5e1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .prose table tr:nth-child(even) td {
+            background: rgba(30, 41, 59, 0.3);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Gradients -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-panel border-b border-white/5 bg-dark-900/90 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                        <a href="../index.html#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                        <a href="index.html" class="text-brand-400 transition-colors">Blog</a>
+                        <a href="../press/index.html" class="hover:text-white transition-colors">Press</a>
+                        <a href="../index.html#pricing" class="hover:text-white transition-colors">Pricing</a>
+                        <a href="https://app.octopuslm.co/login" class="hover:text-white transition-colors">Log In</a>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="https://app.octopuslm.co/signup"
+                            class="hidden md:block px-5 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">
+                            Try It Free
+                        </a>
+                        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2"
+                            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-4">
+                    <a href="../index.html#how-it-works" class="block text-gray-300 hover:text-white">How it Works</a>
+                    <a href="index.html" class="block text-gray-300 hover:text-white">Blog</a>
+                    <a href="../press/index.html" class="block text-gray-300 hover:text-white">Press</a>
+                    <a href="../index.html#pricing" class="block text-gray-300 hover:text-white">Pricing</a>
+                    <a href="https://app.octopuslm.co/login" class="block text-gray-300 hover:text-white">Log In</a>
+                    <a href="https://app.octopuslm.co/signup"
+                        class="block w-full text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        Try It Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+    </script>
+
+    <!-- Article -->
+    <article class="relative z-10 pt-40 pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="../index.html" class="hover:text-brand-400 transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">25 AI Prompts for Psychiatric IME Record Review</span>
+            </nav>
+
+            <!-- Category & Title -->
+            <div
+                class="inline-block px-3 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-300 text-xs font-medium uppercase tracking-wider mb-6">
+                AI Prompts
+            </div>
+
+            <h1 class="text-4xl lg:text-5xl font-heading font-bold leading-tight text-white mb-6">
+                25 AI Prompts for Psychiatric IME Record Review
+            </h1>
+
+            <div class="flex items-center gap-6 text-sm text-gray-400 mb-12 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>August 18, 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>8 min read</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>OctopusLM Team</span>
+                </div>
+            </div>
+
+            <!-- Article Content -->
+            <div class="prose max-w-none">
+<p>A psychiatric IME file is rarely a clean narrative. It&#39;s a family physician&#39;s chart, three therapists with different note conventions, an emergency department visit, a pharmacy printout, and a disability insurer&#39;s correspondence — arriving out of order, often duplicated, sometimes containing pages that belong to a different patient.</p>
+<p>The record has your answers in it. Finding them is the work.</p>
+<p>These are twenty-five prompts for putting AI to that task. They&#39;re grouped the way a psychiatric review actually proceeds: history, diagnosis, treatment, testing, credibility, function, risk. Copy them as written or adapt them to your own report structure.</p>
+<p><strong>One thing before the list.</strong> These prompts assume a specific setup, and without it they&#39;ll produce fluent, unusable output.</p>
+<h2>The four rules that make prompts like these work</h2>
+<p><strong>Every fact carries a page citation.</strong> Not &quot;the record indicates a history of depression&quot; — <code>[p.412]</code>. A statement without a citation is not permitted. If you can&#39;t click through to the source page, you can&#39;t defend the sentence in your report.</p>
+<p><strong>No outside medical knowledge.</strong> The model answers only from the retrieved records. It doesn&#39;t know what usually accompanies a diagnosis, and it must not fill a gap with what&#39;s typical.</p>
+<p><strong>Absence gets stated, not explained.</strong> When something isn&#39;t there, the correct output is one line: <em>&quot;No record of [X] in this file.&quot;</em> No apology, no paragraph about limitations, no suggestion that the question was unanswerable.</p>
+<p><strong>Nothing is inferred silently.</strong> If a value is derived rather than stated, it gets labelled <code>INFERRED:</code> with the derivation shown. Age at date of injury calculated from a birth date is a derivation, not a fact in the record.</p>
+<p>Add these as standing instructions before you run anything below. Most disappointing output from AI record review traces back to their absence rather than to the prompt itself.</p>
+<hr>
+<h2>History</h2>
+<p><strong>1. Past psychiatric history</strong></p>
+<blockquote>
+<p>Summarise all documented past psychiatric history: prior diagnoses, hospitalisations, emergency contacts, prior treating psychiatrists or therapists, and dates. Cite pages.</p>
+</blockquote>
+<p><strong>2. Family psychiatric history</strong></p>
+<blockquote>
+<p>Summarise all documented family psychiatric history, including diagnoses, relationships, and any documented family history of substance use or suicide.</p>
+</blockquote>
+<p><strong>3. Trauma history</strong></p>
+<blockquote>
+<p>Summarise all trauma history documented anywhere in this file, including the date it was first disclosed and to which provider.</p>
+</blockquote>
+<p><strong>4. Developmental and childhood history</strong></p>
+<blockquote>
+<p>Summarise any documented developmental, childhood, or educational history, including learning difficulties or behavioural concerns.</p>
+</blockquote>
+<p><strong>5. Delayed or late disclosure</strong></p>
+<blockquote>
+<p>Identify any significant information that appears late in the treatment record but not earlier — trauma, substance use, prior psychiatric history, or prior claims. Give the date of first disclosure, the provider, and what the earlier records had recorded instead.</p>
+</blockquote>
+<p>That last one is worth running on every file. Late disclosure is a documented fact with a date attached — nothing more. It is not evidence of anything on its own, and a well-configured system should return it that way, without editorial framing. What you do with the timing is your judgment, not the tool&#39;s.</p>
+<hr>
+<h2>Diagnosis</h2>
+<p><strong>6. All psychiatric diagnoses</strong></p>
+<blockquote>
+<p>List every psychiatric diagnosis in this file: diagnosis, DSM or ICD code if stated, date first recorded, provider, provider credentials, and page.</p>
+</blockquote>
+<p><strong>7. Documented diagnostic criteria</strong></p>
+<blockquote>
+<p>For each psychiatric diagnosis, state what the record documents in support of it: specific criteria assessed, structured interview, standardised instrument, or self-report alone. State explicitly where no criteria are documented.</p>
+</blockquote>
+<p><strong>8. Diagnoses by non-psychiatrists</strong></p>
+<blockquote>
+<p>List psychiatric diagnoses recorded by a family physician, nurse practitioner, therapist, counsellor, or other non-psychiatrist, and state whether a psychiatrist ever confirmed each one.</p>
+</blockquote>
+<p><strong>9. Symptom onset relative to the event</strong></p>
+<blockquote>
+<p>For each psychiatric symptom documented, give the date first recorded and state whether it precedes or follows the index event, with the latency in days.</p>
+</blockquote>
+<p>Prompts 7 and 8 do the heaviest lifting in a psychiatric IME. A diagnosis entered in a family practice chart and a diagnosis established through structured assessment carry different evidentiary weight, but they look identical in a record dump. Separating them is most of the diagnostic analysis.</p>
+<p>Instruct the system to always state the recorder&#39;s credentials. Without that, the distinction collapses.</p>
+<hr>
+<h2>Treatment</h2>
+<p><strong>10. All psychotropic medications</strong></p>
+<blockquote>
+<p>List every psychotropic medication: name, dose, start date, stop date, prescriber, documented indication, documented response, and reason for any change.</p>
+</blockquote>
+<p><strong>11. All psychotherapy</strong></p>
+<blockquote>
+<p>List every course of psychotherapy or counselling: modality, provider, credentials, start and end date, sessions attended, sessions missed or cancelled, and documented outcome.</p>
+</blockquote>
+<p><strong>12. Medication adherence</strong></p>
+<blockquote>
+<p>List every documented instance of medication non-adherence, self-discontinuation, dose alteration, or failure to fill, with date and page.</p>
+</blockquote>
+<p><strong>13. Substance use treatment</strong></p>
+<blockquote>
+<p>List any substance use treatment, detoxification, rehabilitation, or addiction counselling documented in this file, with dates, provider, and outcome.</p>
+</blockquote>
+<p>Sessions <em>attended</em> versus sessions <em>missed or cancelled</em> is a deliberate distinction. A twenty-session course of therapy with eleven no-shows is a different treatment history than twenty sessions completed, and the file will report both as &quot;twenty sessions&quot; unless you ask for the breakdown.</p>
+<hr>
+<h2>Psychometrics and testing</h2>
+<p><strong>14. All psychometric testing</strong></p>
+<blockquote>
+<p>List every standardised psychological or psychometric instrument administered: instrument name, date, administrator and credentials, scores as reported, and page.</p>
+</blockquote>
+<p><strong>15. Symptom validity testing</strong></p>
+<blockquote>
+<p>List any symptom validity, performance validity, or effort measure in this file, with instrument, date, administrator, and result as reported.</p>
+</blockquote>
+<p><strong>16. Cognitive testing</strong></p>
+<blockquote>
+<p>List any cognitive screening or neuropsychological testing, with instrument, date, administrator, domain scores as reported, and page.</p>
+</blockquote>
+<p>Note the repeated phrase: <strong>scores as reported</strong>. The tool&#39;s job is to find the number and the page. It should not interpret a score, convert it, place it in a normative band, or comment on its meaning. Score interpretation is the examiner&#39;s work, and any system that volunteers it is doing something you&#39;ll have to undo.</p>
+<hr>
+<h2>Credibility and consistency</h2>
+<p><strong>17. Documented symptom magnification</strong></p>
+<blockquote>
+<p>Identify every note documenting symptom magnification, exaggeration, over-endorsement, or inconsistent presentation, with provider, date, and page.</p>
+</blockquote>
+<p><strong>18. Mental status inconsistencies</strong></p>
+<blockquote>
+<p>Compare documented mental status findings across providers and dates and identify material inconsistencies in mood, affect, cognition, insight, or behaviour.</p>
+</blockquote>
+<p><strong>19. Reported vs observed psychiatric function</strong></p>
+<blockquote>
+<p>Compare reported psychiatric limitation against documented activity elsewhere in the file — employment, education, travel, social activity, caregiving, or recreation.</p>
+</blockquote>
+<p>The wording matters here, and it&#39;s the same principle as prompt 5. Prompt 17 asks for notes <em>documenting</em> magnification — an observation a treating provider recorded, with their name against it. It does not ask the tool to assess credibility. That distinction is what keeps the output usable when the report is challenged.</p>
+<p>When two documents say different things about the same fact, the right output is both, as separate rows with document, date, provider, statement, and page — and no commentary about which is correct. Conflicts are for the examiner to resolve.</p>
+<hr>
+<h2>Function and work capacity</h2>
+<p><strong>20. Cognitive complaints and objective testing</strong></p>
+<blockquote>
+<p>List all documented cognitive complaints — concentration, memory, processing — and state for each whether any objective testing was performed and what it showed.</p>
+</blockquote>
+<p><strong>21. Social and occupational functioning over time</strong></p>
+<blockquote>
+<p>Trace documented social and occupational functioning chronologically from before the index event to the most recent record.</p>
+</blockquote>
+<p><strong>22. Psychiatric work restrictions</strong></p>
+<blockquote>
+<p>List every work restriction, accommodation, or off-work certificate issued on psychiatric grounds, with provider, date, restriction, and duration.</p>
+</blockquote>
+<p>Prompt 21 should return a timeline, not a paragraph. Chronological, each entry carrying date, event, source, and page — with gaps flagged explicitly rather than left implicit. A twelve-month absence of records between the index event and the first psychiatric contact is a finding, and it should appear as one.</p>
+<hr>
+<h2>Risk and acuity</h2>
+<p><strong>23. Suicidal and homicidal ideation</strong></p>
+<blockquote>
+<p>List every documented instance of suicidal ideation, self-harm, or homicidal ideation, with date, provider, what was documented, and any action taken. Report factually without interpretation.</p>
+</blockquote>
+<p><strong>24. Hospitalisations and crisis contacts</strong></p>
+<blockquote>
+<p>List every psychiatric hospitalisation, emergency department visit, crisis line contact, or involuntary admission, with dates, facility, and documented reason.</p>
+</blockquote>
+<p><strong>25. Psychosocial stressors</strong></p>
+<blockquote>
+<p>List all documented psychosocial stressors — financial, legal, relationship, housing, bereavement, or occupational — with date first documented and page.</p>
+</blockquote>
+<p>Risk content demands the flattest possible reporting: date, provider, what was documented, what was done. No alarm language, no interpretation, no summarising several entries into a characterisation. Use the terms the record uses, and don&#39;t substitute a diagnostic label the record doesn&#39;t contain.</p>
+<hr>
+<h2>Before you paste any of these into a general-purpose chatbot</h2>
+<p>Two limits are worth knowing in advance.</p>
+<p><strong>Context.</strong> A psychiatric IME file of eight hundred to two thousand pages will not fit in a chat window. Uploading a portion and prompting against it produces answers that are accurate about the fraction supplied and silent about everything else — which is worse than no answer, because it looks complete.</p>
+<p><strong>Page numbers.</strong> The citations are the point. A general chatbot working from pasted text has no page anchor, so <code>[p.412]</code> either doesn&#39;t appear or appears invented. If you can&#39;t click a citation and land on the page, the output can&#39;t go anywhere near your report.</p>
+<p>These prompts assume retrieval across the full file with page-level anchoring underneath. That&#39;s the setup they were written for.</p>
+<hr>
+<h2>Using this as a checklist</h2>
+<p>Run the twenty-five in order and you have a structured pre-examination picture: who diagnosed what and on what basis, what was tried and whether it was taken, what was tested and what it showed, where the record contradicts itself, and where the gaps are.</p>
+<p>None of that is the opinion. The opinion is yours. But it means you walk into the examination knowing what the record already says — instead of discovering it afterward, at the point where changing your mind is expensive.</p>
+<hr>
+<p><em>OctopusLM turns unstructured medical files into page-cited, review-ready output for independent medical examiners. Every fact links back to the source page.</em></p>
+
+            </div>
+
+            <!-- Related Posts -->
+            <div class="mt-16 pt-16 border-t border-white/10">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8">Related Articles</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="60-ai-prompts-ime-physicians.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">60 AI Prompts for IME Physicians Reviewing Medical Records</h4>
+                        <p class="text-sm text-gray-400">Practical prompts to accelerate your medical record review while maintaining clinical accuracy and…</p>
+                    </a>
+                    <a href="60-ai-prompts-plaintiff-pi-lawyers.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">60 AI Prompts for Plaintiff Personal Injury Lawyers</h4>
+                        <p class="text-sm text-gray-400">Strategic prompts to strengthen your case from intake through trial</p>
+                    </a>
+                    <a href="122-ime-questions.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">122 Questions to Ask Any IME Medical File</h4>
+                        <p class="text-sm text-gray-400">The complete question library we use for independent medical examination record review — 73 universal…</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="relative z-10 py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-brand-600">
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready to transform your workflow?
+            </h2>
+            <p class="text-xl text-brand-100 mb-10">Start using AI to cut medical record review time by 70%</p>
+            <a href="../index.html#pricing"
+                class="inline-block bg-white text-brand-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-50 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                Start Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-900 pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-4">
+                        HIPAA/PIPEDA compliant AI medical analysis platform.
+                        Secure cloud processing built for medical experts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../index.html#how-it-works" class="hover:text-brand-400 transition-colors">How it Works</a></li>
+                        <li><a href="../index.html#demo" class="hover:text-brand-400 transition-colors">Demo</a></li>
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a></li>
+                        <li><a href="../press/index.html" class="hover:text-brand-400 transition-colors">Press</a></li>
+                        <li><a href="../index.html#pricing" class="hover:text-brand-400 transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">Book a Demo</a></li>
+                        <li><a href="https://www.linkedin.com/company/clinexa-co" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2026 Neopric Inc, Canada. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

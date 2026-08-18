@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Reviewing Records Without Admin Support: A Solo Examiner's Workflow | OctopusLM</title>
+    <meta name="title" content="Reviewing Records Without Admin Support: A Solo Examiner's Workflow">
+    <meta name="description" content="Most IME training assumes you have support: - An admin to organize records - A nurse to build chronologies - A tech to handle duplicates - A team to verify…">
+    <meta name="keywords" content="reviewing records without admin support: a solo examiner's workflow, medical record review, IME, medical chronology, legal nurse consultant, OctopusLM">
+    <meta name="author" content="OctopusLM Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://octopuslm.co/blog/solo-examiner-workflow-no-admin-support.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://octopuslm.co/blog/solo-examiner-workflow-no-admin-support.html">
+    <meta property="og:title" content="Reviewing Records Without Admin Support: A Solo Examiner's Workflow">
+    <meta property="og:description" content="Most IME training assumes you have support: - An admin to organize records - A nurse to build chronologies - A tech to handle duplicates - A team to verify…">
+    <meta property="og:image" content="https://octopuslm.co/1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://octopuslm.co/blog/solo-examiner-workflow-no-admin-support.html">
+    <meta property="twitter:title" content="Reviewing Records Without Admin Support: A Solo Examiner's Workflow">
+    <meta property="twitter:description" content="Most IME training assumes you have support: - An admin to organize records - A nurse to build chronologies - A tech to handle duplicates - A team to verify…">
+    <meta property="twitter:image" content="https://octopuslm.co/1.png">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Reviewing Records Without Admin Support: A Solo Examiner's Workflow",
+      "description": "Most IME training assumes you have support: - An admin to organize records - A nurse to build chronologies - A tech to handle duplicates - A team to verify…",
+      "author": {
+            "@type": "Organization",
+            "name": "OctopusLM"
+      },
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "image": "https://octopuslm.co/1.png",
+      "mainEntityOfPage": "https://octopuslm.co/blog/solo-examiner-workflow-no-admin-support.html",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Neopric Inc.",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://octopuslm.co/logo.svg"
+            }
+      }
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prose h2 {
+            color: #fff;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h3 {
+            color: #e0f2fe;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h4 {
+            color: #e0f2fe;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose p {
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose ul,
+        .prose ol {
+            color: #cbd5e1;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            list-style: disc;
+        }
+
+        .prose ol {
+            list-style: decimal;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .prose a {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        .prose a:hover {
+            color: #7dd3fc;
+        }
+
+        .prose hr {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2.5rem 0;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #0ea5e9;
+            padding-left: 1.25rem;
+            margin: 1.5rem 0;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .prose code {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.375rem;
+            padding: 0.125rem 0.375rem;
+            font-size: 0.875em;
+            color: #7dd3fc;
+        }
+
+        .prose pre {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+        }
+
+        .prose pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: #bae6fd;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .prose table th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prose table td {
+            color: #cbd5e1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .prose table tr:nth-child(even) td {
+            background: rgba(30, 41, 59, 0.3);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Gradients -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-panel border-b border-white/5 bg-dark-900/90 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                        <a href="../index.html#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                        <a href="index.html" class="text-brand-400 transition-colors">Blog</a>
+                        <a href="../press/index.html" class="hover:text-white transition-colors">Press</a>
+                        <a href="../index.html#pricing" class="hover:text-white transition-colors">Pricing</a>
+                        <a href="https://app.octopuslm.co/login" class="hover:text-white transition-colors">Log In</a>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="https://app.octopuslm.co/signup"
+                            class="hidden md:block px-5 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">
+                            Try It Free
+                        </a>
+                        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2"
+                            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-4">
+                    <a href="../index.html#how-it-works" class="block text-gray-300 hover:text-white">How it Works</a>
+                    <a href="index.html" class="block text-gray-300 hover:text-white">Blog</a>
+                    <a href="../press/index.html" class="block text-gray-300 hover:text-white">Press</a>
+                    <a href="../index.html#pricing" class="block text-gray-300 hover:text-white">Pricing</a>
+                    <a href="https://app.octopuslm.co/login" class="block text-gray-300 hover:text-white">Log In</a>
+                    <a href="https://app.octopuslm.co/signup"
+                        class="block w-full text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        Try It Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+    </script>
+
+    <!-- Article -->
+    <article class="relative z-10 pt-40 pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="../index.html" class="hover:text-brand-400 transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">Reviewing Records Without Admin Support: A Solo Examiner's…</span>
+            </nav>
+
+            <!-- Category & Title -->
+            <div
+                class="inline-block px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-medium uppercase tracking-wider mb-6">
+                Workflow
+            </div>
+
+            <h1 class="text-4xl lg:text-5xl font-heading font-bold leading-tight text-white mb-6">
+                Reviewing Records Without Admin Support: A Solo Examiner's Workflow
+            </h1>
+
+            <div class="flex items-center gap-6 text-sm text-gray-400 mb-12 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>August 18, 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>10 min read</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>OctopusLM Team</span>
+                </div>
+            </div>
+
+            <!-- Article Content -->
+            <div class="prose max-w-none">
+<h2>The Reality Nobody Talks About</h2>
+<p>Most IME training assumes you have support:</p>
+<ul>
+<li>An admin to organize records</li>
+<li>A nurse to build chronologies</li>
+<li>A tech to handle duplicates</li>
+<li>A team to verify citations</li>
+</ul>
+<p>But many examiners work alone. You&#39;re the physician, the reviewer, the chronology builder, the citation verifier, and the report writer. All while maintaining a clinical practice.</p>
+<p><strong>This post is for you.</strong></p>
+<p>Here&#39;s a workflow designed for solo examiners — efficient, defensible, and realistic.</p>
+<hr>
+<h2>The Solo Examiner&#39;s Challenge</h2>
+<h3><strong>What Makes Solo Hard:</strong></h3>
+<ol>
+<li><strong>Volume:</strong> You&#39;re reviewing 400 pages alone.</li>
+<li><strong>Time:</strong> You have 72 hours and a full clinical schedule.</li>
+<li><strong>Context switching:</strong> You&#39;re switching between patient care and record review.</li>
+<li><strong>No backup:</strong> If you miss something, nobody catches it.</li>
+<li><strong>Pressure:</strong> Attorneys and adjusters expect the same turnaround as large firms.</li>
+</ol>
+<h3><strong>What Makes Solo Possible:</strong></h3>
+<ol>
+<li><strong>Control:</strong> You control the process.</li>
+<li><strong>Consistency:</strong> You develop your own system.</li>
+<li><strong>Accountability:</strong> You know exactly what you did and why.</li>
+</ol>
+<hr>
+<h2>The Solo Workflow (Step-by-Step)</h2>
+<h3><strong>Phase 1: Intake (15-30 minutes)</strong></h3>
+<p><strong>Goal:</strong> Understand what you have and what you need.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><p><strong>Inventory the file:</strong></p>
+<ul>
+<li>Count pages</li>
+<li>List providers</li>
+<li>Note date range</li>
+<li>Identify record types (ER, progress notes, imaging, etc.)</li>
+</ul>
+</li>
+<li><p><strong>Identify obvious gaps:</strong></p>
+<ul>
+<li>Missing records (e.g., no imaging)</li>
+<li>Missing time periods</li>
+<li>Missing providers</li>
+</ul>
+</li>
+<li><p><strong>Set expectations:</strong></p>
+<ul>
+<li>Email the referring attorney/adjuster: &quot;I&#39;ve received the records. I note the following gaps: [list]. I will proceed with the review and may supplement if additional records become available.&quot;</li>
+</ul>
+</li>
+</ol>
+<p><strong>Template email:</strong></p>
+<blockquote>
+<p>Subject: Records Received - [Plaintiff Name]  </p>
+<p>I&#39;ve received [X] pages of records covering [date range].  </p>
+<p>I note the following gaps:  </p>
+<ul>
+<li>[e.g., No imaging reports provided]  </li>
+<li>[e.g., No records from Dr. [Name] referenced in family doctor notes]</li>
+</ul>
+<p>I will proceed with the review. If additional records become available, I reserve the right to supplement my opinion.  </p>
+<p>Expected completion: [Date]</p>
+</blockquote>
+<hr>
+<h3><strong>Phase 2: Organization (30-60 minutes)</strong></h3>
+<p><strong>Goal:</strong> Create a structure for efficient review.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Create a provider table:</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Date Range</th>
+<th>Pages</th>
+<th>Key Gaps</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>City ER</td>
+<td>01/15/24</td>
+<td>1-8</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Dr. Smith</td>
+<td>01/15/24 - 06/20/24</td>
+<td>9-45</td>
+<td>02/10-02/28 (vacation)</td>
+</tr>
+<tr>
+<td>ABC Physio</td>
+<td>01/22/24 - 03/20/24</td>
+<td>46-78</td>
+<td>02/15-02/22 (no shows)</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li><p><strong>Flag duplicates:</strong></p>
+<ul>
+<li>Scan for obvious duplicates (same date, same provider, different formatting)</li>
+<li>Note them: &quot;Duplicate - see also p. [X]&quot;</li>
+</ul>
+</li>
+<li><p><strong>Flag handwritten notes:</strong></p>
+<ul>
+<li>Mark pages that require manual reading</li>
+<li>Set aside time to read them carefully</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><strong>Phase 3: First Pass - Chronology Building (60-120 minutes)</strong></h3>
+<p><strong>Goal:</strong> Build a complete chronology without interpretation.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><p><strong>Use AI for the first draft:</strong></p>
+<ul>
+<li>Upload records to AI tool</li>
+<li>Extract: date, provider, record type, key findings</li>
+<li>Don&#39;t ask AI for opinions yet</li>
+</ul>
+</li>
+<li><p><strong>Manually verify:</strong></p>
+<ul>
+<li>Check a sample of entries (10-20%)</li>
+<li>Verify dates, providers, findings</li>
+<li>Correct errors</li>
+</ul>
+</li>
+<li><p><strong>Add missing entries:</strong></p>
+<ul>
+<li>Handwritten notes (AI may have missed)</li>
+<li>Marginalia and annotations</li>
+<li>Context from cover letters</li>
+</ul>
+</li>
+</ol>
+<p><strong>Chronology template:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Provider</th>
+<th>Record Type</th>
+<th>Finding</th>
+<th>Citation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2024-01-15</td>
+<td>City ER</td>
+<td>ER Report</td>
+<td>MVA, cervical strain</td>
+<td>p. 1-8</td>
+<td></td>
+</tr>
+<tr>
+<td>2024-01-20</td>
+<td>Dr. Smith</td>
+<td>Progress Note</td>
+<td>Follow-up, referred to physio</td>
+<td>p. 12</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h3><strong>Phase 4: Second Pass - Analysis (60-90 minutes)</strong></h3>
+<p><strong>Goal:</strong> Interpret the chronology and form opinions.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><p><strong>Review for causation:</strong></p>
+<ul>
+<li>Is there a temporal relationship?</li>
+<li>Are there pre-existing conditions?</li>
+<li>Are there alternative explanations?</li>
+</ul>
+</li>
+<li><p><strong>Review for gaps:</strong></p>
+<ul>
+<li>Are gaps explained?</li>
+<li>Do gaps suggest non-compliance?</li>
+<li>Do gaps affect prognosis?</li>
+</ul>
+</li>
+<li><p><strong>Review for inconsistencies:</strong></p>
+<ul>
+<li>Self-report vs. objective findings</li>
+<li>Different providers&#39; notes</li>
+<li>Timeline contradictions</li>
+</ul>
+</li>
+<li><p><strong>Form opinions:</strong></p>
+<ul>
+<li>Causation</li>
+<li>Diagnosis</li>
+<li>Prognosis</li>
+<li>Impairment (if applicable)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><strong>Phase 5: Citation Verification (30-60 minutes)</strong></h3>
+<p><strong>Goal:</strong> Ensure every citation is correct.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><p><strong>Verify every citation:</strong></p>
+<ul>
+<li>Check that the page number is correct</li>
+<li>Check that the cited text supports the finding</li>
+<li>Check for additional context on adjacent pages</li>
+</ul>
+</li>
+<li><p><strong>Correct errors:</strong></p>
+<ul>
+<li>If a citation is wrong, fix it</li>
+<li>If context changes the finding, update it</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><strong>Phase 6: Report Writing (60-120 minutes)</strong></h3>
+<p><strong>Goal:</strong> Write a clear, defensible report.</p>
+<p><strong>Structure:</strong></p>
+<ol>
+<li><strong>Introduction:</strong> What you were asked to review</li>
+<li><strong>Records Reviewed:</strong> List of records, with gaps noted</li>
+<li><strong>Chronology:</strong> Complete timeline</li>
+<li><strong>Opinions:</strong> Causation, diagnosis, prognosis, impairment</li>
+<li><strong>Conclusions:</strong> Summary of findings</li>
+</ol>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Write in plain language</li>
+<li>Cite everything</li>
+<li>Avoid jargon</li>
+<li>Be explicit about what you don&#39;t know</li>
+</ul>
+<hr>
+<h3><strong>Phase 7: Final Review (30-60 minutes)</strong></h3>
+<p><strong>Goal:</strong> Catch errors before submission.</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> All dates normalized to one format?</li>
+<li><input disabled="" type="checkbox"> All citations verified?</li>
+<li><input disabled="" type="checkbox"> All gaps explained or noted?</li>
+<li><input disabled="" type="checkbox"> All inconsistencies interpreted?</li>
+<li><input disabled="" type="checkbox"> All opinions supported by evidence?</li>
+<li><input disabled="" type="checkbox"> Report is clear and readable?</li>
+</ul>
+<hr>
+<h2>Time Budget for Solo Examiner</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Intake</td>
+<td>15-30 min</td>
+</tr>
+<tr>
+<td>Organization</td>
+<td>30-60 min</td>
+</tr>
+<tr>
+<td>First Pass (Chronology)</td>
+<td>60-120 min</td>
+</tr>
+<tr>
+<td>Second Pass (Analysis)</td>
+<td>60-90 min</td>
+</tr>
+<tr>
+<td>Citation Verification</td>
+<td>30-60 min</td>
+</tr>
+<tr>
+<td>Report Writing</td>
+<td>60-120 min</td>
+</tr>
+<tr>
+<td>Final Review</td>
+<td>30-60 min</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>5-9 hours</strong></td>
+</tr>
+</tbody></table>
+<p><strong>For a 400-page file, this is realistic.</strong></p>
+<hr>
+<h2>Tools for Solo Examiners</h2>
+<h3><strong>Essential:</strong></h3>
+<ol>
+<li><strong>PDF management software:</strong> Adobe Acrobat, PDF Expert, or similar</li>
+<li><strong>AI chronology tool:</strong> To build first drafts</li>
+<li><strong>Citation manager:</strong> To track page numbers</li>
+<li><strong>Note-taking app:</strong> To capture observations</li>
+</ol>
+<h3><strong>Nice to have:</strong></h3>
+<ol>
+<li><strong>Duplicate detection tool:</strong> To flag duplicates</li>
+<li><strong>OCR tool:</strong> For handwritten notes</li>
+<li><strong>Speech-to-text:</strong> For dictating reports</li>
+</ol>
+<hr>
+<h2>Common Pitfalls for Solo Examiners</h2>
+<h3><strong>1. Skipping the Intake Phase</strong></h3>
+<p><strong>The mistake:</strong> You dive into the records without understanding what you have.</p>
+<p><strong>The fix:</strong> Spend 15-30 minutes on intake. It saves time later.</p>
+<h3><strong>2. Not Setting Expectations</strong></h3>
+<p><strong>The mistake:</strong> You accept an unrealistic deadline. You rush. You miss something.</p>
+<p><strong>The fix:</strong> Set expectations upfront. &quot;I can provide a defensible report in 5-7 business days.&quot;</p>
+<h3><strong>3. Not Using AI</strong></h3>
+<p><strong>The mistake:</strong> You build the chronology manually. It takes 3 hours instead of 1.</p>
+<p><strong>The fix:</strong> Use AI for the first draft. Verify manually.</p>
+<h3><strong>4. Not Verifying Citations</strong></h3>
+<p><strong>The mistake:</strong> You trust your memory. You cite the wrong page.</p>
+<p><strong>The fix:</strong> Verify every citation. It takes 30-60 minutes and prevents liability.</p>
+<h3><strong>5. Not Documenting Gaps</strong></h3>
+<p><strong>The mistake:</strong> You don&#39;t note what&#39;s missing. Opposing counsel points it out.</p>
+<p><strong>The fix:</strong> Document gaps in your report. Reserve the right to supplement.</p>
+<hr>
+<h2>Key Takeaways</h2>
+<ol>
+<li><strong>Solo examiners can produce defensible work with the right workflow.</strong></li>
+<li><strong>Break the process into phases: Intake, Organization, First Pass, Second Pass, Citation Verification, Report Writing, Final Review.</strong></li>
+<li><strong>Use AI for the first draft. Verify manually.</strong></li>
+<li><strong>Set expectations upfront. Don&#39;t accept unrealistic deadlines.</strong></li>
+<li><strong>Document gaps. Reserve the right to supplement.</strong></li>
+<li><strong>Verify every citation. It&#39;s your last line of defense.</strong></li>
+</ol>
+<hr>
+<h2>What&#39;s Next?</h2>
+<p>In our next post, we&#39;ll tackle <strong>&quot;What to Do When Records Arrive Out of Order and Mid-Page&quot;</strong> — how to handle messy files.</p>
+<hr>
+<p><em>This post is part of our series on medical record review for IME physicians. For more, see our <a href="#">60 AI Prompts for IME Physicians Reviewing Medical Records</a>.</em></p>
+<hr>
+<p><strong>Questions for Readers:</strong></p>
+<ul>
+<li>Do you work as a solo examiner? What&#39;s your biggest challenge?</li>
+<li>What tools do you use to manage the workload?</li>
+<li>How do you handle pressure to deliver faster than is defensible?</li>
+</ul>
+<hr>
+<p><em>Published: [Date]</em><br><em>Author: [Your Name]</em><br><em>Category: Medical Record Review</em><br><em>Tags: solo examiner, workflow, IME, medical record review, no admin support</em></p>
+
+            </div>
+
+            <!-- Related Posts -->
+            <div class="mt-16 pt-16 border-t border-white/10">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8">Related Articles</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="handwritten-clinical-notes-ocr-gaps.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Handwritten Clinical Notes: What OCR Misses in Medical Records</h4>
+                        <p class="text-sm text-gray-400">Medical records are increasingly digital. EMRs generate clean, searchable text. PDFs are OCR'd…</p>
+                    </a>
+                    <a href="duplicate-records-header-vs-content-matching.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Duplicate Records: Why Header-Matching Fails and Content-Matching…</h4>
+                        <p class="text-sm text-gray-400">You've seen it. The same record appears three times in the file:</p>
+                    </a>
+                    <a href="records-out-of-order-mid-page.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">What to Do When Records Arrive Out of Order and Mid-Page</h4>
+                        <p class="text-sm text-gray-400">You've received the records. You open the PDF and:</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="relative z-10 py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-brand-600">
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready to transform your workflow?
+            </h2>
+            <p class="text-xl text-brand-100 mb-10">Start using AI to cut medical record review time by 70%</p>
+            <a href="../index.html#pricing"
+                class="inline-block bg-white text-brand-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-50 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                Start Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-900 pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-4">
+                        HIPAA/PIPEDA compliant AI medical analysis platform.
+                        Secure cloud processing built for medical experts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../index.html#how-it-works" class="hover:text-brand-400 transition-colors">How it Works</a></li>
+                        <li><a href="../index.html#demo" class="hover:text-brand-400 transition-colors">Demo</a></li>
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a></li>
+                        <li><a href="../press/index.html" class="hover:text-brand-400 transition-colors">Press</a></li>
+                        <li><a href="../index.html#pricing" class="hover:text-brand-400 transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">Book a Demo</a></li>
+                        <li><a href="https://www.linkedin.com/company/clinexa-co" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2026 Neopric Inc, Canada. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

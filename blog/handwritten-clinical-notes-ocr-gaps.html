@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Handwritten Clinical Notes: What OCR Misses in Medical Records | OctopusLM</title>
+    <meta name="title" content="Handwritten Clinical Notes: What OCR Misses in Medical Records">
+    <meta name="description" content="Medical records are increasingly digital. EMRs generate clean, searchable text. PDFs are OCR'd automatically. You can search, copy, and paste.">
+    <meta name="keywords" content="handwritten clinical notes: what ocr misses in medical records, medical record review, IME, medical chronology, legal nurse consultant, OctopusLM">
+    <meta name="author" content="OctopusLM Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://octopuslm.co/blog/handwritten-clinical-notes-ocr-gaps.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://octopuslm.co/blog/handwritten-clinical-notes-ocr-gaps.html">
+    <meta property="og:title" content="Handwritten Clinical Notes: What OCR Misses in Medical Records">
+    <meta property="og:description" content="Medical records are increasingly digital. EMRs generate clean, searchable text. PDFs are OCR'd automatically. You can search, copy, and paste.">
+    <meta property="og:image" content="https://octopuslm.co/1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://octopuslm.co/blog/handwritten-clinical-notes-ocr-gaps.html">
+    <meta property="twitter:title" content="Handwritten Clinical Notes: What OCR Misses in Medical Records">
+    <meta property="twitter:description" content="Medical records are increasingly digital. EMRs generate clean, searchable text. PDFs are OCR'd automatically. You can search, copy, and paste.">
+    <meta property="twitter:image" content="https://octopuslm.co/1.png">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Handwritten Clinical Notes: What OCR Misses in Medical Records",
+      "description": "Medical records are increasingly digital. EMRs generate clean, searchable text. PDFs are OCR'd automatically. You can search, copy, and paste.",
+      "author": {
+            "@type": "Organization",
+            "name": "OctopusLM"
+      },
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "image": "https://octopuslm.co/1.png",
+      "mainEntityOfPage": "https://octopuslm.co/blog/handwritten-clinical-notes-ocr-gaps.html",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Neopric Inc.",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://octopuslm.co/logo.svg"
+            }
+      }
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prose h2 {
+            color: #fff;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h3 {
+            color: #e0f2fe;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose h4 {
+            color: #e0f2fe;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .prose p {
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose ul,
+        .prose ol {
+            color: #cbd5e1;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            list-style: disc;
+        }
+
+        .prose ol {
+            list-style: decimal;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .prose a {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        .prose a:hover {
+            color: #7dd3fc;
+        }
+
+        .prose hr {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2.5rem 0;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #0ea5e9;
+            padding-left: 1.25rem;
+            margin: 1.5rem 0;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .prose code {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.375rem;
+            padding: 0.125rem 0.375rem;
+            font-size: 0.875em;
+            color: #7dd3fc;
+        }
+
+        .prose pre {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+        }
+
+        .prose pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: #bae6fd;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .prose table th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prose table td {
+            color: #cbd5e1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .prose table tr:nth-child(even) td {
+            background: rgba(30, 41, 59, 0.3);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Gradients -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-panel border-b border-white/5 bg-dark-900/90 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                        <a href="../index.html#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                        <a href="index.html" class="text-brand-400 transition-colors">Blog</a>
+                        <a href="../press/index.html" class="hover:text-white transition-colors">Press</a>
+                        <a href="../index.html#pricing" class="hover:text-white transition-colors">Pricing</a>
+                        <a href="https://app.octopuslm.co/login" class="hover:text-white transition-colors">Log In</a>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="https://app.octopuslm.co/signup"
+                            class="hidden md:block px-5 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">
+                            Try It Free
+                        </a>
+                        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2"
+                            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-4">
+                    <a href="../index.html#how-it-works" class="block text-gray-300 hover:text-white">How it Works</a>
+                    <a href="index.html" class="block text-gray-300 hover:text-white">Blog</a>
+                    <a href="../press/index.html" class="block text-gray-300 hover:text-white">Press</a>
+                    <a href="../index.html#pricing" class="block text-gray-300 hover:text-white">Pricing</a>
+                    <a href="https://app.octopuslm.co/login" class="block text-gray-300 hover:text-white">Log In</a>
+                    <a href="https://app.octopuslm.co/signup"
+                        class="block w-full text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        Try It Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+    </script>
+
+    <!-- Article -->
+    <article class="relative z-10 pt-40 pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="../index.html" class="hover:text-brand-400 transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">Handwritten Clinical Notes: What OCR Misses in Medical…</span>
+            </nav>
+
+            <!-- Category & Title -->
+            <div
+                class="inline-block px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-medium uppercase tracking-wider mb-6">
+                Workflow
+            </div>
+
+            <h1 class="text-4xl lg:text-5xl font-heading font-bold leading-tight text-white mb-6">
+                Handwritten Clinical Notes: What OCR Misses in Medical Records
+            </h1>
+
+            <div class="flex items-center gap-6 text-sm text-gray-400 mb-12 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>August 18, 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>9 min read</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>OctopusLM Team</span>
+                </div>
+            </div>
+
+            <!-- Article Content -->
+            <div class="prose max-w-none">
+<h2>The Digitization Blind Spot</h2>
+<p>Medical records are increasingly digital. EMRs generate clean, searchable text. PDFs are OCR&#39;d automatically. You can search, copy, and paste.</p>
+<p>But there&#39;s a blind spot: <strong>handwritten clinical notes.</strong></p>
+<p>They&#39;re still common in:</p>
+<ul>
+<li>Older records (pre-EMR)</li>
+<li>Smaller practices that haven&#39;t adopted EMRs</li>
+<li>Nursing notes and progress notes</li>
+<li>Consultation letters with handwritten addenda</li>
+<li>Prescription pads and medication changes</li>
+</ul>
+<p>OCR (Optical Character Recognition) struggles with these. And when OCR fails, the content becomes invisible to search, invisible to AI, and easy to miss in a manual review.</p>
+<p>This post covers what OCR misses, why it matters, and what to do about it.</p>
+<hr>
+<h2>What OCR Misses in Handwritten Notes</h2>
+<h3><strong>1. Illegible Handwriting</strong></h3>
+<p><strong>The problem:</strong> The physician&#39;s handwriting is difficult to read. OCR produces gibberish or nothing at all.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Handwritten note: &quot;Pt c/o neck pain, radiating to L arm. MRI ordered.&quot;</li>
+<li>OCR output: &quot;Pt c/o neck pain, radiating to L arm. MRI ordered.&quot; (if lucky)</li>
+<li>OCR output: &quot;Pt c/o neck pain, radiating to L arm. MRI ordered.&quot; (if unlucky - garbled)</li>
+<li>OCR output: [blank] (if completely illegible)</li>
+</ul>
+<p><strong>What you miss:</strong> The chief complaint, the referral for imaging, the clinical reasoning.</p>
+<h3><strong>2. Medical Abbreviations</strong></h3>
+<p><strong>The problem:</strong> Physicians use abbreviations that OCR doesn&#39;t recognize or misinterprets.</p>
+<p><strong>Common abbreviations that get missed or misread:</strong></p>
+<ul>
+<li>&quot;c/o&quot; (complains of) → OCR reads as &quot;c/o&quot; or &quot;co&quot; or &quot;c0&quot;</li>
+<li>&quot;y/o&quot; (year old) → OCR reads as &quot;y/o&quot; or &quot;yo&quot; or &quot;y0&quot;</li>
+<li>&quot;h/o&quot; (history of) → OCR reads as &quot;h/o&quot; or &quot;ho&quot; or &quot;h0&quot;</li>
+<li>&quot;w/&quot; (with) → OCR reads as &quot;w/&quot; or &quot;w&quot; or &quot;w1&quot;</li>
+<li>&quot;b/l&quot; (bilateral) → OCR reads as &quot;b/l&quot; or &quot;bl&quot; or &quot;b1&quot;</li>
+<li>&quot;L&quot; (left) vs. &quot;R&quot; (right) → OCR confuses them</li>
+</ul>
+<p><strong>What you miss:</strong> Laterality (left vs. right), history, context.</p>
+<h3><strong>3. Handwritten Addenda</strong></h3>
+<p><strong>The problem:</strong> A typed note has a handwritten addendum. OCR captures the typed text but misses the addendum.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Typed note: &quot;Follow-up in 2 weeks.&quot;</li>
+<li>Handwritten addendum: &quot;Pt called 3/15 - still in pain. Extended PT.&quot;</li>
+<li>OCR output: &quot;Follow-up in 2 weeks.&quot; (addendum missed)</li>
+</ul>
+<p><strong>What you miss:</strong> The change in plan, the clinical update, the reason for extended treatment.</p>
+<h3><strong>4. Marginalia and Annotations</strong></h3>
+<p><strong>The problem:</strong> Notes in the margins, arrows, underlines, and circles. OCR doesn&#39;t capture these.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Typed note: &quot;MRI lumbar spine.&quot;</li>
+<li>Handwritten annotation in margin: &quot;urgent&quot; with an arrow pointing to the MRI order.</li>
+<li>OCR output: &quot;MRI lumbar spine.&quot; (annotation missed)</li>
+</ul>
+<p><strong>What you miss:</strong> The urgency, the priority, the clinical concern.</p>
+<h3><strong>5. Signatures and Credentials</strong></h3>
+<p><strong>The problem:</strong> The signature line is handwritten. OCR misses it or produces gibberish.</p>
+<p><strong>What you miss:</strong> Who wrote the note. Whether it was a physician, a nurse, a therapist. Whether the note was co-signed.</p>
+<h3><strong>6. Drawings and Diagrams</strong></h3>
+<p><strong>The problem:</strong> Physicians sometimes draw diagrams (pain diagrams, anatomical sketches). OCR can&#39;t capture these.</p>
+<p><strong>What you miss:</strong> The location and distribution of pain, the anatomical context.</p>
+<hr>
+<h2>Why This Matters for IME Physicians</h2>
+<h3><strong>1. Incomplete Chronologies</strong></h3>
+<p>If you&#39;re relying on OCR&#39;d text, you&#39;re missing content. Your chronology is incomplete.</p>
+<h3><strong>2. Missed Clinical Details</strong></h3>
+<p>Handwritten notes often contain:</p>
+<ul>
+<li>Chief complaints</li>
+<li>Clinical reasoning</li>
+<li>Changes in treatment plan</li>
+<li>Urgency indicators</li>
+</ul>
+<p>Missing these details affects your opinions on causation, prognosis, and impairment.</p>
+<h3><strong>3. Wrong Provider Attribution</strong></h3>
+<p>If you can&#39;t read the signature, you don&#39;t know who wrote the note. This matters for:</p>
+<ul>
+<li>Credibility (is this a physician or a nurse?)</li>
+<li>Scope of practice (is this within the writer&#39;s scope?)</li>
+<li>Consistency (do different providers agree?)</li>
+</ul>
+<h3><strong>4. AI Training Gaps</strong></h3>
+<p>If you&#39;re using AI to analyze records, AI is only as good as the OCR. If OCR missed content, AI missed it too.</p>
+<hr>
+<h2>How to Catch What OCR Misses</h2>
+<h3><strong>1. Identify Handwritten Notes Upfront</strong></h3>
+<p>When you receive a file, scan for handwritten notes:</p>
+<ul>
+<li>Flip through the pages (don&#39;t rely on OCR search).</li>
+<li>Flag pages with handwriting.</li>
+<li>Note the volume: &quot;Approximately 15% of records are handwritten.&quot;</li>
+</ul>
+<h3><strong>2. Read Handwritten Notes Manually</strong></h3>
+<p>Don&#39;t rely on OCR for these pages. Read them yourself.</p>
+<p><strong>Tips for reading difficult handwriting:</strong></p>
+<ul>
+<li>Look for context clues (what would make sense here?).</li>
+<li>Compare with other notes from the same provider (you&#39;ll learn their style).</li>
+<li>Use a magnifying glass or zoom in on the PDF.</li>
+<li>If truly illegible, note it: &quot;Handwritten note - illegible.&quot;</li>
+</ul>
+<h3><strong>3. Transcribe Key Handwritten Content</strong></h3>
+<p>For important handwritten notes, transcribe them into your chronology:</p>
+<ul>
+<li>&quot;Handwritten note (p. 45): &#39;Pt c/o neck pain, radiating to L arm. MRI ordered.&#39;&quot;</li>
+<li>Note that it&#39;s handwritten: &quot;Handwritten addendum to typed note.&quot;</li>
+</ul>
+<h3><strong>4. Flag Illegible Notes</strong></h3>
+<p>If you can&#39;t read a note, flag it:</p>
+<ul>
+<li>&quot;Handwritten note (p. 47) - illegible. May contain relevant clinical information.&quot;</li>
+<li>Request clarification from counsel if necessary.</li>
+</ul>
+<h3><strong>5. Don&#39;t Assume AI Caught It</strong></h3>
+<p>If you&#39;re using AI to analyze records, verify that it captured handwritten content:</p>
+<ul>
+<li>Ask the AI: &quot;What does the handwritten note on page 45 say?&quot;</li>
+<li>If the AI can&#39;t answer, read it manually.</li>
+</ul>
+<hr>
+<h2>The Workflow That Works</h2>
+<h3><strong>Step 1: Scan for Handwriting (5-10 minutes)</strong></h3>
+<ul>
+<li>Flip through the file.</li>
+<li>Flag pages with handwriting.</li>
+<li>Note the volume.</li>
+</ul>
+<h3><strong>Step 2: Read Handwritten Notes Manually (15-30 minutes)</strong></h3>
+<ul>
+<li>Read each flagged page.</li>
+<li>Transcribe key content.</li>
+<li>Note illegible sections.</li>
+</ul>
+<h3><strong>Step 3: Integrate into Chronology (10-20 minutes)</strong></h3>
+<ul>
+<li>Add handwritten content to your chronology.</li>
+<li>Note that it&#39;s handwritten: &quot;Handwritten note (p. 45).&quot;</li>
+</ul>
+<h3><strong>Step 4: Verify AI Output (5-10 minutes)</strong></h3>
+<ul>
+<li>If using AI, verify that it captured handwritten content.</li>
+<li>Fill in gaps manually.</li>
+</ul>
+<hr>
+<h2>What This Looks Like in Practice</h2>
+<p><strong>Scenario:</strong> You receive a 200-page file. Approximately 20% is handwritten.</p>
+<p><strong>OCR-only approach:</strong></p>
+<ul>
+<li>Search for &quot;neck pain.&quot;</li>
+<li>Find 3 references.</li>
+<li>Miss 2 references in handwritten notes.</li>
+</ul>
+<p><strong>Manual approach:</strong></p>
+<ul>
+<li>Scan for handwriting.</li>
+<li>Read handwritten notes manually.</li>
+<li>Find 5 references to &quot;neck pain&quot; (3 typed, 2 handwritten).</li>
+<li>Chronology is complete.</li>
+</ul>
+<hr>
+<h2>Key Takeaways</h2>
+<ol>
+<li><strong>OCR misses content in handwritten notes: illegible handwriting, abbreviations, addenda, marginalia, signatures, and drawings.</strong></li>
+<li><strong>Missing this content creates incomplete chronologies and missed clinical details.</strong></li>
+<li><strong>Identify handwritten notes upfront. Read them manually.</strong></li>
+<li><strong>Transcribe key handwritten content into your chronology.</strong></li>
+<li><strong>Flag illegible notes. Request clarification if necessary.</strong></li>
+<li><strong>Don&#39;t assume AI caught it. Verify.</strong></li>
+</ol>
+<hr>
+<h2>What&#39;s Next?</h2>
+<p>In our next post, we&#39;ll tackle <strong>&quot;Duplicate Records: Why Header-Matching Fails and Content-Matching Doesn&#39;t&quot;</strong> — the right way to identify duplicates.</p>
+<hr>
+<p><em>This post is part of our series on medical record review for IME physicians. For more, see our <a href="#">60 AI Prompts for IME Physicians Reviewing Medical Records</a>.</em></p>
+<hr>
+<p><strong>Questions for Readers:</strong></p>
+<ul>
+<li>How do you handle handwritten notes in your practice?</li>
+<li>What percentage of records you receive are handwritten?</li>
+<li>What&#39;s your process for reading difficult handwriting?</li>
+</ul>
+<hr>
+<p><em>Published: [Date]</em><br><em>Author: [Your Name]</em><br><em>Category: Medical Record Review</em><br><em>Tags: handwritten notes, OCR, medical records, IME, record review</em></p>
+
+            </div>
+
+            <!-- Related Posts -->
+            <div class="mt-16 pt-16 border-t border-white/10">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8">Related Articles</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="duplicate-records-header-vs-content-matching.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Duplicate Records: Why Header-Matching Fails and Content-Matching…</h4>
+                        <p class="text-sm text-gray-400">You've seen it. The same record appears three times in the file:</p>
+                    </a>
+                    <a href="solo-examiner-workflow-no-admin-support.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Reviewing Records Without Admin Support: A Solo Examiner's Workflow</h4>
+                        <p class="text-sm text-gray-400">Most IME training assumes you have support: - An admin to organize records - A nurse to build chronologies -…</p>
+                    </a>
+                    <a href="records-out-of-order-mid-page.html" class="glass-card p-6 rounded-xl group">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">What to Do When Records Arrive Out of Order and Mid-Page</h4>
+                        <p class="text-sm text-gray-400">You've received the records. You open the PDF and:</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="relative z-10 py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-brand-600">
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready to transform your workflow?
+            </h2>
+            <p class="text-xl text-brand-100 mb-10">Start using AI to cut medical record review time by 70%</p>
+            <a href="../index.html#pricing"
+                class="inline-block bg-white text-brand-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-50 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                Start Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-900 pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-4">
+                        HIPAA/PIPEDA compliant AI medical analysis platform.
+                        Secure cloud processing built for medical experts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../index.html#how-it-works" class="hover:text-brand-400 transition-colors">How it Works</a></li>
+                        <li><a href="../index.html#demo" class="hover:text-brand-400 transition-colors">Demo</a></li>
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors">Blog</a></li>
+                        <li><a href="../press/index.html" class="hover:text-brand-400 transition-colors">Press</a></li>
+                        <li><a href="../index.html#pricing" class="hover:text-brand-400 transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="../terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">Book a Demo</a></li>
+                        <li><a href="https://www.linkedin.com/company/clinexa-co" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2026 Neopric Inc, Canada. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
