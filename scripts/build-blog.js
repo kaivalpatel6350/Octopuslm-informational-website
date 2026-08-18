@@ -150,6 +150,16 @@ function parsePost(raw, filename) {
     // Remove leading horizontal rule(s)
     md = md.replace(/^(---\s*\n)+/, '').trim();
 
+    // Remove trailing placeholder footer block, e.g.:
+    //   *Published: [Date]*
+    //   *Author: [Your Name]*
+    //   *Category: ...*
+    //   *Tags: ...*
+    // (possibly preceded by a horizontal rule)
+    md = md.replace(/(\n---\s*)?\n\*Published:[^\n]*\n(\*(Author|Category|Tags):[^\n]*\n?)*\s*$/i, '').trim();
+    // Remove any leftover trailing horizontal rule(s)
+    md = md.replace(/(\n---\s*)+$/, '').trim();
+
     // Description: first meaningful paragraph
     if (!meta.description) {
         const lines = md.split('\n');
@@ -642,6 +652,10 @@ ${relatedHtml}
 // Main
 // ---------------------------------------------------------------------------
 function main() {
+    if (!fs.existsSync(MD_DIR)) {
+        console.log(`No markdown folder found at ${MD_DIR} — create it and add .md files to publish new posts.`);
+        return;
+    }
     const files = fs.readdirSync(MD_DIR).filter(f => f.endsWith('.md')).sort();
     const posts = [];
 
