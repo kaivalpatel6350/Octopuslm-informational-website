@@ -220,7 +220,7 @@ In our next post, we'll tackle **"7 Ways a Medical Chronology Goes Wrong (and Ho
 
 ---
 
-*This post is part of our series on medical record review for IME physicians. For more, see our [60 AI Prompts for IME Physicians Reviewing Medical Records](#).*
+*This post is part of our series on medical record review for IME physicians. For more, see our [60 AI Prompts for IME Physicians Reviewing Medical Records](60-ai-prompts-ime-physicians.html).*
 
 ---
 

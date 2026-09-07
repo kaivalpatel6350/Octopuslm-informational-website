@@ -325,7 +325,7 @@ In our next post, we'll tackle **"CNESST Assessment Documentation Requirements"*
 
 ---
 
-*This post is part of our series on Canadian medical-legal documentation. For more, see our [Ontario LAT Guide](#).*
+*This post is part of our series on Canadian medical-legal documentation. For more, see our [Ontario SABS Medical Records Guide](ontario-sabs-medical-records-requirements.html).*
 
 ---
 

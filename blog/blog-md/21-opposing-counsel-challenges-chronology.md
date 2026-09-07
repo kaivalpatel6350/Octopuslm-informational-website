@@ -242,7 +242,7 @@ In our next post, we'll begin our **Prompt Listicles series** with **"60 AI Prom
 
 ---
 
-*This post is part of our series on defensible medical record review. For more, see our [60 AI Prompts for IME Physicians Reviewing Medical Records](#).*
+*This post is part of our series on defensible medical record review. For more, see our [60 AI Prompts for IME Physicians Reviewing Medical Records](60-ai-prompts-ime-physicians.html).*
 
 ---
 

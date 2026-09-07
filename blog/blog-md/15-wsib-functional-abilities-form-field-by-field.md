@@ -386,7 +386,7 @@ In our next post, we'll tackle **"HCAI OCF-18 and OCF-23: What Adjudicators Look
 
 ---
 
-*This post is part of our series on Canadian medical-legal documentation. For more, see our [WSIB Guide](#).*
+*This post is part of our series on Canadian medical-legal documentation. For more, see our [Ontario SABS Medical Records Guide](ontario-sabs-medical-records-requirements.html).*
 
 ---
 

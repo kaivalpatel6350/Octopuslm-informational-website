@@ -152,7 +152,7 @@ If you can't find the missing part, note it:
 
 ### **Step 1: Identify Duplicates**
 
-Use content-matching (see our post on [Duplicate Records: Why Header-Matching Fails](#)).
+Use content-matching (see our post on [Duplicate Records: Why Header-Matching Fails](duplicate-records-header-vs-content-matching.html)).
 
 ### **Step 2: Flag Them**
 
@@ -232,7 +232,7 @@ In our next post, we'll tackle **"Reviewing Slip-and-Fall Records for Causation"
 
 ---
 
-*This post is part of our series on medical record review for IME physicians. For more, see our [60 AI Prompts for IME Physicians Reviewing Medical Records](#).*
+*This post is part of our series on medical record review for IME physicians. For more, see our [60 AI Prompts for IME Physicians Reviewing Medical Records](60-ai-prompts-ime-physicians.html).*
 
 ---
 

@@ -316,7 +316,7 @@ In our next post, we'll tackle **"Preparing Medical Evidence for Ontario LAT Hea
 
 ---
 
-*This post is part of our series on Canadian medical-legal documentation. For more, see our [Ontario Auto Insurance Guide](#).*
+*This post is part of our series on Canadian medical-legal documentation. For more, see our [Ontario SABS Medical Records Guide](ontario-sabs-medical-records-requirements.html).*
 
 ---
 

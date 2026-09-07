@@ -273,7 +273,7 @@ In our next post, we'll tackle **"WSIB Functional Abilities Form: Field-by-Field
 
 ---
 
-*This post is part of our series on Canadian medical-legal documentation. For more, see our [Ontario SABS Guide](#).*
+*This post is part of our series on Canadian medical-legal documentation. For more, see our [HCAI OCF-18 and OCF-23 Guide](hcai-ocf-18-ocf-23-adjudicators.html).*
 
 ---
 

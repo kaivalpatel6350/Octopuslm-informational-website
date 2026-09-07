@@ -310,7 +310,7 @@ In our next post, we'll begin our **Trust series** with **"Why Every Line in a C
 
 ---
 
-*This post is part of our series on Canadian medical-legal documentation. For more, see our [CNESST Guide](#).*
+*This post is part of our series on Canadian medical-legal documentation. For more, see our [WSIB Functional Abilities Form Guide](wsib-functional-abilities-form-field-by-field.html).*
 
 ---
 

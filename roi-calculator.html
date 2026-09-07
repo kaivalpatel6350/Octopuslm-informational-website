@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Medical Record Review ROI Calculator — Hours & Cost Saved | OctopusLM Medical Chronology AI</title>
+    <meta name="title" content="Medical Record Review ROI Calculator — Hours & Cost Saved | OctopusLM Medical Chronology AI">
+    <meta name="description"
+        content="Estimate the time and cost saved by AI medical record review. Enter pages per month, review speed, and hourly rate to compare manual chronology cost against OctopusLM at $0.10/page or $250/month.">
+    <meta name="keywords"
+        content="medical record review ROI calculator, medical chronology time saved, medical record review cost calculator, claims medical review savings, AI medical summary ROI">
+    <meta name="author" content="Neopric Inc.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://octopuslm.co/roi-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://octopuslm.co/roi-calculator.html">
+    <meta property="og:title" content="Medical Record Review ROI Calculator | OctopusLM">
+    <meta property="og:description"
+        content="Pages reviewed → hours saved → cost saved. Compare manual medical chronology cost against OctopusLM.">
+    <meta property="og:image" content="https://octopuslm.co/1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="OctopusLM">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://octopuslm.co/roi-calculator.html">
+    <meta property="twitter:title" content="Medical Record Review ROI Calculator | OctopusLM">
+    <meta property="twitter:description" content="Pages reviewed → hours saved → cost saved.">
+    <meta property="twitter:image" content="https://octopuslm.co/1.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "OctopusLM Medical Record Review ROI Calculator",
+      "url": "https://octopuslm.co/roi-calculator.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Estimates hours and cost saved by using OctopusLM AI medical record review instead of manual chronology preparation.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "publisher": { "@type": "Organization", "name": "Neopric Inc.", "url": "https://octopuslm.co" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://octopuslm.co/" },
+        { "@type": "ListItem", "position": 2, "name": "ROI Calculator", "item": "https://octopuslm.co/roi-calculator.html" }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 900: '#0c4a6e' },
+                        dark: { 900: '#0f172a', 800: '#1e293b', 700: '#334155' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        .glass-card { background: linear-gradient(180deg, rgba(30,41,59,.7) 0%, rgba(15,23,42,.6) 100%); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.08); }
+        .hero-glow::before { content: ''; position: absolute; top: -180px; left: 50%; transform: translateX(-50%); width: 700px; height: 400px; background: radial-gradient(circle, rgba(14,165,233,.18) 0%, transparent 65%); pointer-events: none; z-index: 0; }
+        .field { width: 100%; background: rgba(15,23,42,.8); border: 1px solid rgba(255,255,255,.12); color: #fff; border-radius: .5rem; padding: .65rem .85rem; font-size: 1rem; }
+        .field:focus { outline: none; border-color: #38bdf8; box-shadow: 0 0 0 3px rgba(56,189,248,.2); }
+        input[type=range] { width: 100%; accent-color: #0ea5e9; }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- ─── Nav ──────────────────────────────────────────────────────────── -->
+    <nav class="sticky top-0 z-50 bg-dark-900/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center" aria-label="OctopusLM home">
+                <span class="font-heading font-bold text-white text-xl tracking-tight">Octopus<span class="text-brand-400">LM</span></span>
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="index.html#how-it-works" class="hidden sm:block text-sm text-gray-300 hover:text-white transition-colors">How it Works</a>
+                <a href="index.html#solutions" class="hidden sm:block text-sm text-gray-300 hover:text-white transition-colors">Solutions</a>
+                <a href="blog/index.html" class="hidden sm:block text-sm text-gray-300 hover:text-white transition-colors">Blog</a>
+                <a href="pricing.html" class="hidden sm:block text-sm text-gray-300 hover:text-white transition-colors">Pricing</a>
+                <a href="https://app.octopuslm.co/login" class="text-sm text-gray-300 hover:text-white transition-colors">Log In</a>
+                <a href="https://app.octopuslm.co/signup" class="px-4 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">Try It Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ─── Hero ─────────────────────────────────────────────────────── -->
+        <section class="relative hero-glow overflow-hidden">
+            <div class="relative z-10 max-w-3xl mx-auto px-6 pt-16 pb-8 text-center">
+                <p class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-3">ROI Calculator</p>
+                <h1 class="font-heading font-extrabold text-white text-4xl sm:text-5xl leading-tight tracking-tight">
+                    How much is manual medical record review costing you?
+                </h1>
+                <p class="mt-6 text-lg text-gray-300 leading-relaxed">
+                    Pages reviewed → hours saved → dollars saved. Change any input; the numbers update instantly.
+                    Nothing you enter leaves your browser.
+                </p>
+            </div>
+        </section>
+
+        <!-- ─── Calculator ───────────────────────────────────────────────── -->
+        <section class="py-10">
+            <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-6">
+
+                <!-- Inputs -->
+                <form id="roi-form" class="glass-card rounded-2xl p-7 lg:col-span-3 space-y-6" onsubmit="return false;">
+                    <h2 class="font-heading font-bold text-white text-xl">Your current workload</h2>
+
+                    <div>
+                        <label for="pages" class="flex justify-between text-sm text-gray-300 mb-2">
+                            <span>Pages of medical records reviewed per month</span>
+                            <span id="pages-out" class="text-white font-semibold">3,000</span>
+                        </label>
+                        <input id="pages" type="range" min="100" max="50000" step="100" value="3000">
+                        <div class="flex justify-between text-xs text-gray-500 mt-1"><span>100</span><span>50,000</span></div>
+                    </div>
+
+                    <div>
+                        <label for="speed" class="flex justify-between text-sm text-gray-300 mb-2">
+                            <span>Manual review speed (pages per hour)</span>
+                            <span id="speed-out" class="text-white font-semibold">60</span>
+                        </label>
+                        <input id="speed" type="range" min="20" max="200" step="5" value="60">
+                        <div class="flex justify-between text-xs text-gray-500 mt-1"><span>20 — dense / handwritten</span><span>200 — clean, typed</span></div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="rate" class="block text-sm text-gray-300 mb-2">Fully loaded hourly cost of the reviewer ($)</label>
+                            <input id="rate" class="field" type="number" min="10" max="1000" step="5" value="85" inputmode="decimal">
+                            <p class="text-xs text-gray-500 mt-1">Nurse reviewer, adjuster, paralegal, or your own billing rate.</p>
+                        </div>
+                        <div>
+                            <label for="verify" class="block text-sm text-gray-300 mb-2">Time you'll still spend verifying (%)</label>
+                            <input id="verify" class="field" type="number" min="0" max="100" step="5" value="25" inputmode="numeric">
+                            <p class="text-xs text-gray-500 mt-1">Checking citations and reading the pages that matter. Be conservative.</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-500 leading-relaxed border-t border-white/5 pt-4">
+                        This estimates the time spent producing a summary and chronology from the raw file. It does not assume the clinical or claims judgement goes away — it assumes you verify a cited chronology instead of reading every page. Defaults are illustrative; your own numbers are the ones that matter.
+                    </p>
+                </form>
+
+                <!-- Results -->
+                <aside class="glass-card rounded-2xl p-7 lg:col-span-2 flex flex-col gap-6" aria-live="polite">
+                    <h2 class="font-heading font-bold text-white text-xl">Estimated monthly impact</h2>
+
+                    <div>
+                        <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Manual review today</p>
+                        <p class="font-heading text-3xl font-bold text-white"><span id="manual-hours">50</span> hrs</p>
+                        <p class="text-gray-400 text-sm">≈ $<span id="manual-cost">4,250</span> in reviewer time</p>
+                    </div>
+
+                    <div>
+                        <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Hours saved with OctopusLM</p>
+                        <p class="font-heading text-4xl font-bold text-brand-400"><span id="hours-saved">37.5</span> hrs</p>
+                        <p class="text-gray-400 text-sm"><span id="days-saved">4.7</span> working days a month</p>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-5 space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Reviewer time saved</span>
+                            <span class="text-white font-semibold">$<span id="labour-saved">3,188</span></span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">OctopusLM cost — <span id="plan-label">Unlimited</span></span>
+                            <span class="text-white font-semibold">−$<span id="plan-cost">250</span></span>
+                        </div>
+                        <div class="flex justify-between text-base pt-3 border-t border-white/10">
+                            <span class="text-white font-semibold">Net monthly saving</span>
+                            <span id="net-saving" class="text-brand-400 font-heading font-bold text-xl">$2,938</span>
+                        </div>
+                        <p class="text-xs text-gray-500" id="plan-note">Pay As You Go would cost $300 at this volume; Unlimited ($250/mo) is cheaper.</p>
+                    </div>
+
+                    <div class="mt-auto pt-2">
+                        <a href="https://app.octopuslm.co/signup" class="block text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">Test it on one real file</a>
+                        <p class="text-center text-xs text-gray-500 mt-3">$0.10/page. No contract. <a href="pricing.html" class="underline hover:text-gray-300">Full pricing</a></p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ─── How it's calculated ──────────────────────────────────────── -->
+        <section class="py-14 border-t border-white/5">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="font-heading font-bold text-white text-2xl mb-5">How the estimate is calculated</h2>
+                <ol class="list-decimal ml-6 space-y-3 text-gray-300 leading-relaxed">
+                    <li><strong class="text-white">Manual hours</strong> = pages per month ÷ pages per hour.</li>
+                    <li><strong class="text-white">Manual cost</strong> = manual hours × hourly cost.</li>
+                    <li><strong class="text-white">Hours with OctopusLM</strong> = manual hours × verification %. You still open the cited pages that matter to the decision; you stop reading the ones that don't.</li>
+                    <li><strong class="text-white">OctopusLM cost</strong> = the cheaper of $0.10 × pages or $250 flat. The break-even is 2,500 pages a month.</li>
+                    <li><strong class="text-white">Net saving</strong> = reviewer time saved − OctopusLM cost.</li>
+                </ol>
+                <p class="text-gray-400 text-sm mt-6 leading-relaxed">
+                    What the calculator deliberately leaves out: faster reserving, fewer outsourced summary invoices, shorter cycle times, and the value of a chronology that survives a challenge because every line cites a page. Those are real but specific to your organization. For team pricing on the Insurance &amp; Legal plan, <a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:text-brand-300 underline">book a 15-minute demo</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- ─── Closing CTA ──────────────────────────────────────────────── -->
+        <section class="py-20 border-t border-white/5">
+            <div class="max-w-2xl mx-auto px-6 text-center">
+                <h2 class="font-heading font-bold text-white text-3xl mb-4">The estimate is a guess. One file isn't.</h2>
+                <p class="text-gray-400 mb-8">Upload a real file, time how long the verification takes, and put your own number in the calculator.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="https://app.octopuslm.co/signup" class="inline-block px-8 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">Try It Free</a>
+                    <a href="index.html#solutions" class="inline-block px-8 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-lg transition-colors">See it for your team</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ─── Footer ───────────────────────────────────────────────────────── -->
+    <footer class="border-t border-white/5 py-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-5">
+            <div class="text-gray-400 text-sm">
+                <span class="font-heading font-bold text-white">Octopus<span class="text-brand-400">LM</span></span>
+                — a product of <span class="text-gray-300">Neopric Inc.</span>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+                <a href="index.html#solutions" class="hover:text-white transition-colors">Solutions</a>
+                <a href="pricing.html" class="hover:text-white transition-colors">Pricing</a>
+                <a href="compare/octopuslm-vs-wisedocs.html" class="hover:text-white transition-colors">vs Wisedocs</a>
+                <a href="blog/index.html" class="hover:text-white transition-colors">Blog</a>
+                <a href="press/index.html" class="hover:text-white transition-colors">Press</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+                <a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Book a demo</a>
+            </div>
+        </div>
+        <p class="text-center text-gray-600 text-xs mt-6">&copy; 2026 Neopric Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // ROI calculator — pure client-side, no dependencies, nothing sent anywhere.
+        (function () {
+            var PER_PAGE = 0.10;
+            var UNLIMITED = 250;
+            var HOURS_PER_DAY = 8;
+
+            var $ = function (id) { return document.getElementById(id); };
+            var inputs = { pages: $('pages'), speed: $('speed'), rate: $('rate'), verify: $('verify') };
+
+            var fmtInt = function (n) { return Math.round(n).toLocaleString('en-US'); };
+            var fmtDec = function (n) { return (Math.round(n * 10) / 10).toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); };
+            var clamp = function (v, lo, hi, fallback) {
+                v = parseFloat(v);
+                if (isNaN(v)) return fallback;
+                return Math.min(hi, Math.max(lo, v));
+            };
+
+            function calc() {
+                var pages = clamp(inputs.pages.value, 100, 50000, 3000);
+                var speed = clamp(inputs.speed.value, 20, 200, 60);
+                var rate = clamp(inputs.rate.value, 10, 1000, 85);
+                var verifyPct = clamp(inputs.verify.value, 0, 100, 25) / 100;
+
+                var manualHours = pages / speed;
+                var manualCost = manualHours * rate;
+                var withToolHours = manualHours * verifyPct;
+                var hoursSaved = manualHours - withToolHours;
+                var labourSaved = hoursSaved * rate;
+
+                var paygCost = pages * PER_PAGE;
+                var useUnlimited = paygCost > UNLIMITED;
+                var planCost = useUnlimited ? UNLIMITED : paygCost;
+                var net = labourSaved - planCost;
+
+                $('pages-out').textContent = fmtInt(pages);
+                $('speed-out').textContent = fmtInt(speed);
+                $('manual-hours').textContent = fmtDec(manualHours);
+                $('manual-cost').textContent = fmtInt(manualCost);
+                $('hours-saved').textContent = fmtDec(hoursSaved);
+                $('days-saved').textContent = fmtDec(hoursSaved / HOURS_PER_DAY);
+                $('labour-saved').textContent = fmtInt(labourSaved);
+                $('plan-label').textContent = useUnlimited ? 'Unlimited' : 'Pay As You Go';
+                $('plan-cost').textContent = fmtInt(planCost);
+
+                var netEl = $('net-saving');
+                netEl.textContent = (net < 0 ? '−$' : '$') + fmtInt(Math.abs(net));
+                netEl.className = 'font-heading font-bold text-xl ' + (net < 0 ? 'text-red-400' : 'text-brand-400');
+
+                $('plan-note').textContent = useUnlimited
+                    ? 'Pay As You Go would cost $' + fmtInt(paygCost) + ' at this volume; Unlimited ($250/mo) is cheaper.'
+                    : 'Below 2,500 pages a month, Pay As You Go ($' + fmtInt(paygCost) + ') is cheaper than Unlimited ($250).';
+            }
+
+            Object.keys(inputs).forEach(function (k) {
+                inputs[k].addEventListener('input', calc);
+                inputs[k].addEventListener('change', calc);
+            });
+            calc();
+        })();
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+</body>
+
+</html>

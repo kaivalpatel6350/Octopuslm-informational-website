@@ -279,7 +279,7 @@ In our next post, we'll tackle **"Life Care Planning: Building the Record Founda
 
 ---
 
-*This post is part of our series on medical record review for IME physicians. For more, see our [60 AI Prompts for IME Physicians Reviewing Medical Records](#).*
+*This post is part of our series on medical record review for IME physicians. For more, see our [60 AI Prompts for IME Physicians Reviewing Medical Records](60-ai-prompts-ime-physicians.html).*
 
 ---
 
