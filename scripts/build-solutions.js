@@ -37,7 +37,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 
 const TESTIMONIAL = {
     quote: "It's cutting my record review time significantly and extracting useful insights and summaries from otherwise complex time consuming files.",
-    author: 'Dr. Alex Luczak',
+    author: 'Verified Healthcare Professional',
     role: 'Psychiatrist',
 };
 

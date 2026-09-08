@@ -30,7 +30,7 @@ Never describe it as a desktop app. Never quote $99–299/mo (stale).
 - [x] **[site]** Pricing consistent everywhere: `index.html`, `pricing.html`, JSON-LD `offers`.
 - [x] **[site]** Brand disambiguation: every `<title>` pairs OctopusLM with a descriptor
       (`| OctopusLM Medical Chronology AI`). Enforced by `TITLE_SUFFIX` in both build scripts.
-- [x] **[site]** Homepage trust signals: Dr. Alex Luczak quote, product-fact stats,
+- [x] **[site]** Homepage trust signals: Verified Healthcare Professional quote, product-fact stats,
       "Featured in" row (WorkCompCentral, Legaltech Hub, AlternativeTo). `Review` in JSON-LD.
 - [ ] **[manual]** Claim G2 vendor profile — Medical Record Review / Legal Case Management.
 - [ ] **[manual]** Claim Capterra vendor profile — same categories.
