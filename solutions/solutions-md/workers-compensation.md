@@ -52,7 +52,7 @@ All processing is PIPEDA compliant, and files from US jurisdictions are handled 
 
 ## Pricing
 
-Try it on one real file at **$0.10 per page**. Individual professionals move to **$250 per month unlimited**. Programs with multiple adjusters or high claim volume are priced as a custom Insurance & Legal plan with multi-user accounts, case sharing, and causation analysis — [book a 15-minute demo](https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/).
+Try it on one real file — **the first 1,000 pages are free**. After that it's **$0.10 per page**, dropping to **$0.05** with a $300 credit load and **$0.04** with $4,000. High-volume programs can get the Insurance & Legal plan: $0.04 per page at a 1,000,000-page minimum, with all agent pipelines, causation analysis, and dedicated deployment — [book a 15-minute demo](https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/).
 
 ## FAQ
 

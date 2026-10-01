@@ -352,7 +352,7 @@ ${navHtml()}
                     <a href="https://app.octopuslm.co/signup" class="w-full sm:w-auto text-center px-7 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">Try it on a real file</a>
                     <a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto text-center px-7 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-lg transition-colors">Book a 15-minute demo</a>
                 </div>
-                <p class="mt-5 text-sm text-gray-500">$0.10/page &nbsp;·&nbsp; $250/month unlimited &nbsp;·&nbsp; Custom team plans &nbsp;·&nbsp; HIPAA &amp; PIPEDA compliant &nbsp;·&nbsp; Web-based, nothing to install</p>
+                <p class="mt-5 text-sm text-gray-500">1,000 free pages &nbsp;·&nbsp; $0.10/page, down to $0.04 &nbsp;·&nbsp; No subscription &nbsp;·&nbsp; HIPAA &amp; PIPEDA compliant &nbsp;·&nbsp; Web-based, nothing to install</p>
             </div>
         </section>
 

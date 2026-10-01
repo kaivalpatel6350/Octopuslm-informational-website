@@ -45,7 +45,7 @@ The **Insurance & Legal** plan adds what teams need on top of the core product:
 - Claims intelligence and risk scoring on the treatment pattern
 - Volume pricing for high-file-count programs
 
-Individual reviewers can start today at $0.10 per page or $250 per month unlimited — no procurement cycle required to run a pilot on real files.
+Individual reviewers can start today with 1,000 free pages, then $0.10 per page (down to $0.04 with credits) — no procurement cycle required to run a pilot on real files.
 
 ## Security and compliance
 
@@ -67,7 +67,7 @@ Yes. Files with thousands of pages, out-of-order records, mid-page breaks, dupli
 
 ### What does it cost for a claims team?
 
-Individual users pay $0.10 per page or $250 per month unlimited. Team plans with multi-user accounts, case sharing, and volume rates are priced per program — book a 15-minute demo and we will scope it against your file volume.
+Individual users pay $0.10 per page, $0.05 with a $300 credit top-up, or $0.04 with a $4,000 top-up — no subscription. The Insurance & Legal plan is $0.04 per page with a 1,000,000-page minimum and a separate setup fee, including all agent pipelines and dedicated deployment in your AWS or Azure — book a 15-minute demo and we will scope it against your file volume.
 
 ### Is there an API or claims-system integration?
 

@@ -30,7 +30,7 @@ The competitor descriptions below reflect each vendor's public website as of thi
 
 **Best for:** adjusters, nurse reviewers, IME physicians, and claims units that want a page-cited chronology on a real file today at published pricing.
 
-Self-serve web application. Upload PDFs, get a narrative summary and dated chronology with a page citation on every line, export to Word or Excel. **$0.10 per page or $250 per month unlimited**; a custom Insurance & Legal plan adds multi-user accounts, case sharing, Bradford Hill causation analysis, and volume rates. HIPAA and PIPEDA compliant; Canadian company with deep SABS, OCF, LAT, WSIB, and CNESST coverage.
+Self-serve web application. Upload PDFs, get a narrative summary and dated chronology with a page citation on every line, export to Word or Excel. **$0.10 per page, down to $0.04 with credits — no subscription**; the Insurance & Legal plan ($0.04 per page, 1,000,000-page minimum) adds all agent pipelines, Bradford Hill causation analysis, and dedicated deployment in your AWS or Azure. HIPAA and PIPEDA compliant; Canadian company with deep SABS, OCF, LAT, WSIB, and CNESST coverage.
 
 *Limitations:* no human-review services layer; no claims-system API on the self-serve plans; small company.
 
@@ -74,7 +74,7 @@ It depends on who is using it. For enterprise, integrated, services-inclusive pr
 
 ### How much does medical chronology software cost?
 
-Enterprise platforms generally do not publish pricing. OctopusLM is $0.10 per page or $250 per month unlimited for an individual, with custom team plans. See the pricing page for details.
+Enterprise platforms generally do not publish pricing. OctopusLM is $0.10 per page, $0.05 with a $300 credit top-up, or $0.04 with a $4,000 top-up — no subscription, plus an Insurance & Legal plan at $0.04 per page with a 1,000,000-page minimum. See the pricing page for details.
 
 ### Why do page citations matter so much for carriers?
 
