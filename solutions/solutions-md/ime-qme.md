@@ -37,7 +37,7 @@ We are explicit about this: AI should organize and cite the record. It should no
 
 ## For the solo examiner
 
-Many IME physicians work without administrative support. OctopusLM is built for that: web-based, nothing to install, $0.10 per page with no commitment, and a $250 per month unlimited plan when the volume justifies it. See [a solo examiner's workflow without admin support](../blog/solo-examiner-workflow-no-admin-support.html).
+Many IME physicians work without administrative support. OctopusLM is built for that: web-based, nothing to install, 1,000 free pages to start, then $0.10 per page — down to $0.05 when you load $300 in credits. No subscription. See [a solo examiner's workflow without admin support](../blog/solo-examiner-workflow-no-admin-support.html).
 
 ## FAQ
 

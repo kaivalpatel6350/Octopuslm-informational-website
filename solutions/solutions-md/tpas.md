@@ -51,7 +51,7 @@ Yes. Multi-user team plans support separate cases and sharing rules, so one clie
 
 ### How is OctopusLM priced for a TPA?
 
-Individual users pay $0.10 per page or $250 per month unlimited. TPA programs are priced as a custom Insurance & Legal plan based on adjuster count and file volume, with multi-user accounts, case sharing, and volume rates. Book a 15-minute demo to scope it.
+Individual users pay $0.10 per page, $0.05 with a $300 credit top-up, or $0.04 with a $4,000 top-up — no subscription. TPA programs can get the Insurance & Legal plan: $0.04 per page with a 1,000,000-page minimum and a separate setup fee, including all agent pipelines and dedicated deployment. Book a 15-minute demo to scope it.
 
 ### Does it replace our nurse reviewers or outside medical review vendor?
 

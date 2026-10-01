@@ -9,7 +9,7 @@
     <title>Medical Record Review ROI Calculator — Hours & Cost Saved | OctopusLM Medical Chronology AI</title>
     <meta name="title" content="Medical Record Review ROI Calculator — Hours & Cost Saved | OctopusLM Medical Chronology AI">
     <meta name="description"
-        content="Estimate the time and cost saved by AI medical record review. Enter pages per month, review speed, and hourly rate to compare manual chronology cost against OctopusLM at $0.10/page or $250/month.">
+        content="Estimate the time and cost saved by AI medical record review. Enter pages per month, review speed, and hourly rate to compare manual chronology cost against OctopusLM's per-page credit pricing ($0.10, down to $0.04).">
     <meta name="keywords"
         content="medical record review ROI calculator, medical chronology time saved, medical record review cost calculator, claims medical review savings, AI medical summary ROI">
     <meta name="author" content="Neopric Inc.">
@@ -196,19 +196,19 @@
                             <span class="text-white font-semibold">$<span id="labour-saved">3,188</span></span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-400">OctopusLM cost — <span id="plan-label">Unlimited</span></span>
-                            <span class="text-white font-semibold">−$<span id="plan-cost">250</span></span>
+                            <span class="text-gray-400">OctopusLM cost — <span id="plan-label">$300 credit loads</span></span>
+                            <span class="text-white font-semibold">−$<span id="plan-cost">150</span></span>
                         </div>
                         <div class="flex justify-between text-base pt-3 border-t border-white/10">
                             <span class="text-white font-semibold">Net monthly saving</span>
-                            <span id="net-saving" class="text-brand-400 font-heading font-bold text-xl">$2,938</span>
+                            <span id="net-saving" class="text-brand-400 font-heading font-bold text-xl">$3,038</span>
                         </div>
-                        <p class="text-xs text-gray-500" id="plan-note">Pay As You Go would cost $300 at this volume; Unlimited ($250/mo) is cheaper.</p>
+                        <p class="text-xs text-gray-500" id="plan-note">At $0.05/page with $300 credit loads. The standard rate ($0.10/page) would be $300.</p>
                     </div>
 
                     <div class="mt-auto pt-2">
                         <a href="https://app.octopuslm.co/signup" class="block text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">Test it on one real file</a>
-                        <p class="text-center text-xs text-gray-500 mt-3">$0.10/page. No contract. <a href="pricing.html" class="underline hover:text-gray-300">Full pricing</a></p>
+                        <p class="text-center text-xs text-gray-500 mt-3">First 1,000 pages free. No subscription. <a href="pricing.html" class="underline hover:text-gray-300">Full pricing</a></p>
                     </div>
                 </aside>
             </div>
@@ -222,7 +222,7 @@
                     <li><strong class="text-white">Manual hours</strong> = pages per month ÷ pages per hour.</li>
                     <li><strong class="text-white">Manual cost</strong> = manual hours × hourly cost.</li>
                     <li><strong class="text-white">Hours with OctopusLM</strong> = manual hours × verification %. You still open the cited pages that matter to the decision; you stop reading the ones that don't.</li>
-                    <li><strong class="text-white">OctopusLM cost</strong> = the cheaper of $0.10 × pages or $250 flat. The break-even is 2,500 pages a month.</li>
+                    <li><strong class="text-white">OctopusLM cost</strong> = pages × your credit rate: $0.05/page with $300 credit loads, or $0.04/page with $4,000 loads once you process 100,000+ pages a year (about 8,300 a month). The standard rate is $0.10/page.</li>
                     <li><strong class="text-white">Net saving</strong> = reviewer time saved − OctopusLM cost.</li>
                 </ol>
                 <p class="text-gray-400 text-sm mt-6 leading-relaxed">
@@ -267,8 +267,10 @@
     <script>
         // ROI calculator — pure client-side, no dependencies, nothing sent anywhere.
         (function () {
-            var PER_PAGE = 0.10;
-            var UNLIMITED = 250;
+            var STANDARD_RATE = 0.10;   // no top-up
+            var BULK_RATE = 0.05;       // $300+ credit load
+            var VOLUME_RATE = 0.04;     // $4,000+ credit load (100,000 pages)
+            var VOLUME_PAGES_PER_MONTH = 100000 / 12;
             var HOURS_PER_DAY = 8;
 
             var $ = function (id) { return document.getElementById(id); };
@@ -294,9 +296,10 @@
                 var hoursSaved = manualHours - withToolHours;
                 var labourSaved = hoursSaved * rate;
 
-                var paygCost = pages * PER_PAGE;
-                var useUnlimited = paygCost > UNLIMITED;
-                var planCost = useUnlimited ? UNLIMITED : paygCost;
+                var standardCost = pages * STANDARD_RATE;
+                var useVolume = pages >= VOLUME_PAGES_PER_MONTH;
+                var planRate = useVolume ? VOLUME_RATE : BULK_RATE;
+                var planCost = pages * planRate;
                 var net = labourSaved - planCost;
 
                 $('pages-out').textContent = fmtInt(pages);
@@ -306,16 +309,15 @@
                 $('hours-saved').textContent = fmtDec(hoursSaved);
                 $('days-saved').textContent = fmtDec(hoursSaved / HOURS_PER_DAY);
                 $('labour-saved').textContent = fmtInt(labourSaved);
-                $('plan-label').textContent = useUnlimited ? 'Unlimited' : 'Pay As You Go';
+                $('plan-label').textContent = useVolume ? '$4,000 credit loads' : '$300 credit loads';
                 $('plan-cost').textContent = fmtInt(planCost);
 
                 var netEl = $('net-saving');
                 netEl.textContent = (net < 0 ? '−$' : '$') + fmtInt(Math.abs(net));
                 netEl.className = 'font-heading font-bold text-xl ' + (net < 0 ? 'text-red-400' : 'text-brand-400');
 
-                $('plan-note').textContent = useUnlimited
-                    ? 'Pay As You Go would cost $' + fmtInt(paygCost) + ' at this volume; Unlimited ($250/mo) is cheaper.'
-                    : 'Below 2,500 pages a month, Pay As You Go ($' + fmtInt(paygCost) + ') is cheaper than Unlimited ($250).';
+                $('plan-note').textContent = 'At $' + planRate.toFixed(2) + '/page with ' + (useVolume ? '$4,000' : '$300') +
+                    ' credit loads. The standard rate ($0.10/page) would be $' + fmtInt(standardCost) + '.';
             }
 
             Object.keys(inputs).forEach(function (k) {

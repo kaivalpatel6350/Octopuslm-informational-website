@@ -51,7 +51,7 @@ OctopusLM is built for both, and for files where the two overlap.
 
 ## Pricing
 
-Run one real file at **$0.10 per page**. Individual professionals use **$250 per month unlimited**. Disability units with multiple examiners are priced as a custom Insurance & Legal plan with multi-user accounts and case sharing — [book a 15-minute demo](https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/).
+Run one real file — **the first 1,000 pages are free**. After that it's **$0.10 per page**, dropping to **$0.05** with a $300 credit load. Disability units can get the Insurance & Legal plan: $0.04 per page at a 1,000,000-page minimum, with all agent pipelines and dedicated deployment — [book a 15-minute demo](https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/).
 
 ## FAQ
 

@@ -48,7 +48,7 @@ Subrogation demands live or die on the medical timeline: what was caused by the 
 
 ## Pricing
 
-Run one real file at **$0.10 per page**. Individual professionals use **$250 per month unlimited**. BI units and accident benefits teams are priced as a custom Insurance & Legal plan with multi-user accounts, case sharing, and Bradford Hill causation analysis — [book a 15-minute demo](https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/).
+Run one real file — **the first 1,000 pages are free**. After that it's **$0.10 per page**, dropping to **$0.05** with a $300 credit load. BI units and accident benefits teams can get the Insurance & Legal plan: $0.04 per page at a 1,000,000-page minimum, with all agent pipelines, Bradford Hill causation analysis, and dedicated deployment — [book a 15-minute demo](https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/).
 
 ## FAQ
 

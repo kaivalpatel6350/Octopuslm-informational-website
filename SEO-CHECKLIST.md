@@ -16,10 +16,11 @@ and matches `index.html`.
 > with every line cited to the page it came from. Built for IME physicians, legal
 > nurse consultants, attorneys, and insurance claims teams. HIPAA & PIPEDA
 > compliant; records are never used to train models.
-> **Pricing:** $0.10 per page pay-as-you-go, $250/month unlimited, or a custom
-> Insurance & Legal team plan. A product of Neopric Inc. — https://octopuslm.co
+> **Pricing:** credit-based, no subscription — $0.10 per page, $0.05 with a $300
+> top-up, $0.04 with a $4,000 top-up; 1,000 free trial pages. Insurance & Legal
+> plan: $0.04 per page, 1,000,000-page minimum, setup fee separate. A product of Neopric Inc. — https://octopuslm.co
 
-Never describe it as a desktop app. Never quote $99–299/mo (stale).
+Never describe it as a desktop app. Never quote $99–299/mo or $250/month unlimited (stale).
 
 ## Phase 1 — Foundation
 

@@ -14,7 +14,7 @@ related: beyond-deduplication-medical-platforms, why-every-line-needs-page-citat
 
 **Wisedocs** is an enterprise claims-documentation platform sold to insurance carriers, TPAs, and large IME and legal organizations. It pairs AI with human expert oversight, offers API integrations into claims systems, and is sold through a sales process — there is no public pricing and no self-serve sign-up.
 
-**OctopusLM** is a self-serve web application for the professional who has to read the file today. Upload PDFs, get a narrative summary and dated chronology with a page citation on every line, export to Word or Excel. Pricing is public — $0.10 per page or $250 per month unlimited — and teams can add multi-user accounts on a custom Insurance & Legal plan.
+**OctopusLM** is a self-serve web application for the professional who has to read the file today. Upload PDFs, get a narrative summary and dated chronology with a page citation on every line, export to Word or Excel. Pricing is public — $0.10 per page, down to $0.04 with credits, no subscription — and high-volume teams can get the Insurance & Legal plan with dedicated deployment.
 
 If you are a carrier standing up a programme-wide, integrated documentation platform with a services component, evaluate Wisedocs. If you are an IME physician, legal nurse consultant, adjuster, or claims unit that wants a defensible chronology on a real file this afternoon without a procurement cycle, start with OctopusLM.
 
@@ -24,7 +24,7 @@ If you are a carrier standing up a programme-wide, integrated documentation plat
 |---|---|---|
 | **Primary buyer** | Individual professionals and claims / legal teams | Enterprise insurers, TPAs, large IME and legal organizations |
 | **How you start** | Sign up online, upload a file, pay per page | Book a demo, sales process |
-| **Public pricing** | Yes — $0.10/page, $250/mo unlimited, custom team plan | Not published |
+| **Public pricing** | Yes — $0.10/page, down to $0.04 with credits; Insurance & Legal plan | Not published |
 | **Output** | Narrative summary + dated chronology, Word / Excel export | Medical chronologies, summaries, insights, custom reports, chat interface |
 | **Page-level citations** | Every chronology line links to its source page | Key terms and timeline entries linked to source documents |
 | **Human review layer** | You verify using the citations; no third-party reviewer | AI with expert human oversight as part of the service |
@@ -41,7 +41,7 @@ Wisedocs details above reflect its public website as of this writing. If anythin
 - **You need to verify, not trust.** Every line in the chronology cites its page. That is the property that makes an AI chronology defensible when opposing counsel or an appeals tribunal asks where a fact came from. See [why every line needs a page citation](../blog/why-every-line-needs-page-citation.html).
 - **You are a solo or small practice.** IME physicians, legal nurse consultants, and small firms are the core user base, and the pricing is built for them.
 - **You work Canadian files.** SABS, OCF forms, LAT, WSIB, and CNESST are covered in depth, not as a footnote.
-- **You want predictable cost.** $250 a month unlimited means the tenth file costs the same as the first.
+- **You want transparent cost.** Public per-page pricing with no subscription: load $300 in credits and every page is $0.05.
 
 ## Where Wisedocs is the better fit
 
@@ -66,7 +66,7 @@ For individual professionals and claims or legal teams that want a self-serve, p
 
 ### Does Wisedocs publish pricing?
 
-Not on its public website as of this writing. OctopusLM's pricing is public: $0.10 per page, $250 per month unlimited, and a custom Insurance & Legal plan for teams.
+Not on its public website as of this writing. OctopusLM's pricing is public: $0.10 per page, $0.05 with a $300 credit top-up, or $0.04 with a $4,000 top-up — no subscription, plus an Insurance & Legal plan at $0.04 per page with a 1,000,000-page minimum.
 
 ### Can I use OctopusLM without talking to sales?
 

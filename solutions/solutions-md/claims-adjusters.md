@@ -45,7 +45,7 @@ Every AI summary should be checked before it drives a decision. Because OctopusL
 
 ## Pricing for adjusters
 
-Sign up and run a real file for **$0.10 per page** — no contract, no minimum. If you are running files every week, **$250 per month unlimited**. If your whole unit wants it, ask your manager about the Insurance & Legal team plan with shared cases and volume pricing.
+Sign up and run a real file — **your first 1,000 pages are free**. After that it's **$0.10 per page**, or **$0.05** when you load $300 in credits. No subscription, no contract. If your whole unit wants it, ask your manager about the Insurance & Legal plan.
 
 ## FAQ
 
