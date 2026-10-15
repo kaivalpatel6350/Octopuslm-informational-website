@@ -11,7 +11,8 @@ Static HTML + Tailwind (CDN). No build step, no dependencies.
 ```
 .
 ├── index.html          # Homepage — hero, demo video, how it works, pricing
-├── terms.html          # Terms of Service (noindex)
+├── terms.html          # Terms of Service / EULA incl. Schedule B IMA (noindex)
+├── privacy.html        # Privacy Policy (noindex)
 ├── 404.html            # Custom error page (served by GitHub Pages)
 ├── blog/               # Blog listing + 10 articles
 ├── press/              # Press releases & media coverage
