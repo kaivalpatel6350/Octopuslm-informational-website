@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — OctopusLM Medical Chronology AI</title>
+    <meta name="description"
+        content="How OctopusLM collects, uses, stores and protects personal and personal health information, including Canadian data storage, retention, and our role as an information manager.">
+    <!-- Legal boilerplate: useful to users, but not a page we want ranking -->
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://octopuslm.co/privacy.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/web-app-manifest-512x512.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .prose h2 {
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .prose h3 {
+            color: #e2e8f0;
+            font-family: 'Outfit', sans-serif;
+            margin-top: 1.5em;
+            margin-bottom: 0.75em;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .prose p {
+            margin-bottom: 1em;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5em;
+            margin-bottom: 1em;
+            color: #cbd5e1;
+        }
+
+        .prose li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-panel border-b border-white/5 bg-dark-900/90 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                        <a href="index.html#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                        <a href="blog/index.html" class="hover:text-white transition-colors">Blog</a>
+                        <a href="press/index.html" class="hover:text-white transition-colors">Press</a>
+                        <a href="pricing.html" class="hover:text-white transition-colors">Pricing</a>
+                        <a href="https://app.octopuslm.co/login" class="hover:text-white transition-colors">Log In</a>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="https://app.octopuslm.co/signup"
+                            class="hidden md:block px-5 py-2 bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold rounded-lg transition-colors">
+                            Try It Free
+                        </a>
+                        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2"
+                            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-4">
+                    <a href="index.html#how-it-works" class="block text-gray-300 hover:text-white">How it Works</a>
+                    <a href="blog/index.html" class="block text-gray-300 hover:text-white">Blog</a>
+                    <a href="press/index.html" class="block text-gray-300 hover:text-white">Press</a>
+                    <a href="pricing.html" class="block text-gray-300 hover:text-white">Pricing</a>
+                    <a href="https://app.octopuslm.co/login" class="block text-gray-300 hover:text-white">Log In</a>
+                    <a href="https://app.octopuslm.co/signup"
+                        class="block w-full text-center px-5 py-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors">
+                        Try It Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+    </script>
+
+    <main class="pt-32 pb-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Privacy Policy</h1>
+            <p class="text-gray-400 mb-12">Effective October 2026</p>
+
+            <div class="prose max-w-none">
+                <p>This Privacy Policy explains how Neopric Inc. and 741512 NB Inc. (operating as Clinexa.co) (together, "OctopusLM", "we", "us") handle personal information in connection with the OctopusLM website and the OctopusLM web application.</p>
+                <h2>1. Our role</h2>
+                <p>OctopusLM is used by healthcare providers, independent medical examiners, legal and insurance professionals (our "Customers") to review medical records. When a Customer uploads medical records, the Customer remains responsible for that personal health information as its trustee, custodian or controller. We process it only on the Customer's behalf and instructions, as an information manager, agent or service provider under laws such as PIPEDA, The Personal Health Information Act (Manitoba), PHIPA (Ontario) and similar provincial laws.</p>
+                <p>If you are a patient or claimant and have a question about your records, please contact the clinic or organization that holds them. We will refer any request we receive to the right Customer.</p>
+                <h2>2. Information we collect</h2>
+                <ul>
+                    <li><strong>Account information:</strong> name, email address, organization, professional role and login details.</li>
+                    <li><strong>Customer content:</strong> medical records and other documents Customers upload, and the summaries, chronologies and other outputs generated from them. This may include personal health information.</li>
+                    <li><strong>Usage and audit information:</strong> logs of sign-ins and actions in the application, including an audit log of access to personal health information, used for security and support.</li>
+                    <li><strong>Billing information:</strong> details needed to process payments. Card details are handled by our payment processor and are not stored by us.</li>
+                    <li><strong>Website:</strong> this website does not use advertising or analytics cookies. The ROI calculator runs entirely in your browser.</li>
+                </ul>
+                <h2>3. How we use information</h2>
+                <ul>
+                    <li>To provide the OctopusLM service, including generating summaries, chronologies, AI chat responses and examiner drafts.</li>
+                    <li>To secure the service, prevent misuse, and investigate incidents.</li>
+                    <li>To provide support and respond to your requests.</li>
+                    <li>To bill for the service and meet legal obligations.</li>
+                </ul>
+                <p>We use only the minimum personal health information needed to provide the service. We never sell personal information, never use it for advertising, and never use Customer content to train artificial intelligence models.</p>
+                <h2>4. Where information is stored</h2>
+                <p>Customer content and outputs are stored on Amazon Web Services (AWS) infrastructure located in Canada. Artificial intelligence processing may be performed transiently on servers outside Canada, configured with zero data retention, so no Customer content is stored outside Canada or retained by the AI provider. Customers who require Canada-only processing can request it.</p>
+                <h2>5. Service providers</h2>
+                <p>We share information only with service providers that help us run OctopusLM, under written terms that protect it:</p>
+                <ul>
+                    <li><strong>Amazon Web Services:</strong> hosting, storage in Canada, and document and AI processing.</li>
+                    <li><strong>Convex, Inc.:</strong> application metadata such as account details, case titles, dates and status. No medical document content or personal health information is stored in Convex.</li>
+                </ul>
+                <p>We may also disclose information where required by law, such as in response to a court order.</p>
+                <h2>6. Retention and deletion</h2>
+                <ul>
+                    <li>Uploaded files and generated outputs are deleted automatically 30 days after upload.</li>
+                    <li>Customers can delete any case, or their entire account, at any time from within the application.</li>
+                    <li>When a Customer's agreement ends, we securely destroy remaining Customer content within 30 days.</li>
+                    <li>Account, billing and audit records are kept only as long as needed for security, support and legal purposes.</li>
+                </ul>
+                <h2>7. Security</h2>
+                <p>We protect information with encryption in transit and at rest, unique user accounts and access controls, per-user audit logging, threat monitoring, and limited, need-to-know staff access. Staff with access sign confidentiality pledges and complete privacy training. If a privacy breach affects Customer content, we notify the affected Customer within 24 hours of becoming aware of it and help them meet their own notification duties.</p>
+                <h2>8. Your rights</h2>
+                <p>You may ask to access or correct the personal information we hold about you as an account holder, or withdraw consent where applicable, by contacting us below. For personal health information in medical records, please contact the Customer that holds your records; we will help them respond. You may also contact the privacy regulator in your province or the Office of the Privacy Commissioner of Canada.</p>
+                <h2>9. Changes to this policy</h2>
+                <p>We may update this policy from time to time. We will post the updated version on this page with a new effective date.</p>
+                <h2>10. Contact us</h2>
+                <p>Privacy Officer, Neopric Inc., Saint John, New Brunswick, Canada &nbsp;·&nbsp; Email: <a href="mailto:info@neopric.com" class="text-brand-400 hover:underline">info@neopric.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-xl font-heading font-bold tracking-tight text-white">Octopus<span
+                                class="text-brand-400">LM</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-4">
+                        HIPAA/PIPEDA compliant AI medical analysis platform.
+                        Secure cloud processing built for medical experts.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#how-it-works" class="hover:text-brand-400 transition-colors">How it Works</a></li>
+                        <li><a href="index.html#demo" class="hover:text-brand-400 transition-colors">Demo</a></li>
+                        <li><a href="blog/index.html" class="hover:text-brand-400 transition-colors">Blog</a></li>
+                        <li><a href="press/index.html" class="hover:text-brand-400 transition-colors">Press</a></li>
+                        <li><a href="pricing.html" class="hover:text-brand-400 transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="terms.html" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="https://outlook.office.com/book/OctopusLM15minDemo@neopric.com/" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">Book a Demo</a></li>
+                        <li><a href="https://www.linkedin.com/company/clinexa-co" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">&copy; 2026 Neopric Inc, Canada. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
