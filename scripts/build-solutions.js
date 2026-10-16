@@ -36,9 +36,9 @@ const TITLE_SUFFIX = 'OctopusLM Medical Chronology AI';
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const TESTIMONIAL = {
-    quote: "It's cutting my record review time significantly and extracting useful insights and summaries from otherwise complex time consuming files.",
-    author: 'Verified Healthcare Professional',
-    role: 'Psychiatrist',
+    quote: 'OctopusLM has cut the time I spend reviewing records for IMEs by 75%. It is now a core part of my workflow.',
+    author: 'Dr. Alex Luczak',
+    role: '',
 };
 
 const SOLUTION_NAV = [
@@ -289,7 +289,7 @@ function testimonialSection(show) {
             <figure class="max-w-3xl mx-auto px-6 text-center">
                 <i class="fa-solid fa-quote-left text-brand-400 text-2xl mb-4" aria-hidden="true"></i>
                 <blockquote class="text-xl text-gray-100 leading-relaxed">“${escapeHtml(TESTIMONIAL.quote)}”</blockquote>
-                <figcaption class="mt-5 text-sm text-gray-400"><span class="text-white font-semibold">${TESTIMONIAL.author}</span> — ${TESTIMONIAL.role}</figcaption>
+                <figcaption class="mt-5 text-sm text-gray-400"><span class="text-white font-semibold">${TESTIMONIAL.author}</span>${TESTIMONIAL.role ? ` — ${TESTIMONIAL.role}` : ''}</figcaption>
             </figure>
         </section>`;
 }
